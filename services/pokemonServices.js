@@ -5,7 +5,8 @@ const path = require("path");
 const DATA_FILE = path.join(__dirname, "..", "pokemon.json");
 const MOVES_FILE = path.join(__dirname, "..", "moves.json");
 
-const BATCH_SIZE = 50;
+const BATCH_SIZE = 150;
+const POKEMON_LEVEL = 75;
 
 // ------------------------
 // Helpers
@@ -51,7 +52,7 @@ async function fetchNextBatch() {
 
     // Fetch Pokémon list
     const listResponse = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=721"
+      "https://pokeapi.co/api/v2/pokemon?limit=905"
     );
     const allPokemon = listResponse.data.results;
 
@@ -85,12 +86,12 @@ async function fetchNextBatch() {
 
         const hpStat =
           d.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
-        const maxHP = calculateHP(hpStat, 50);
+        const maxHP = calculateHP(hpStat, POKEMON_LEVEL);
 
         return {
           id: startIndex + index + 1,
           name: d.name,
-          level: 50,
+          level: POKEMON_LEVEL,
           maxHP,
           image: d.sprites.front_default,
           sprite_front: d.sprites.other.showdown.front_default,
