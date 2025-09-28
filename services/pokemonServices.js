@@ -138,4 +138,5 @@ module.exports = {
   loadData,
   fetchNextBatch,
   calculateHP,
+  loadMoves,
 };
