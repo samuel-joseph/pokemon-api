@@ -30,10 +30,8 @@ async function fetchAllMoves() {
               priority: mv.priority,
               damage_class: mv.damage_class.name,
               power: mv.power,
-              crit_rate: mv.meta.crit_rate,
               accuracy: mv.accuracy,
               pp: mv.pp,
-              flint_chance: mv.meta.flinch_chance,
             };
           }
         } catch (err) {
@@ -49,4 +47,6 @@ async function fetchAllMoves() {
   }
 }
 
-fetchAllMoves();
+// fetchAllMoves();
+
+module.exports = { fetchAllMoves };
