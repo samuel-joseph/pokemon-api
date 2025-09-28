@@ -5,6 +5,8 @@ const path = require("path");
 const DATA_FILE = path.join(__dirname, "..", "pokemon.json");
 const MOVES_FILE = path.join(__dirname, "..", "moves.json");
 
+const BATCH_SIZE = 50;
+
 // ------------------------
 // Helpers
 // ------------------------
@@ -16,7 +18,7 @@ function loadData() {
   if (fs.existsSync(DATA_FILE)) {
     return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
   }
-  return null;
+  return { pokemons: [] };
 }
 
 function loadMoves() {
@@ -26,30 +28,45 @@ function loadMoves() {
   return {};
 }
 
-// Pick N random items from an array
 function pickRandom(arr, count) {
   return arr.sort(() => 0.5 - Math.random()).slice(0, count);
 }
 
+function calculateHP(base, level, iv = 0, ev = 0) {
+  return (
+    Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) +
+    level +
+    10
+  );
+}
+
 // ------------------------
-// Main Function
+// Incremental Fetch
 // ------------------------
-async function fetchAndStoreData() {
+async function fetchNextBatch() {
   try {
+    const data = loadData();
+    const startIndex = data.pokemons.length;
     const movesData = loadMoves();
-    const [pokemonResponse] = await Promise.all([
-      axios.get("https://pokeapi.co/api/v2/pokemon?limit=151"),
-    ]);
+
+    // Fetch Pokémon list
+    const listResponse = await axios.get(
+      "https://pokeapi.co/api/v2/pokemon?limit=905"
+    );
+    const allPokemon = listResponse.data.results;
+
+    if (startIndex >= allPokemon.length) {
+      console.log("All Pokémon already fetched!");
+      return data;
+    }
+
+    const batch = allPokemon.slice(startIndex, startIndex + BATCH_SIZE);
 
     const pokemonDetails = await Promise.all(
-      pokemonResponse.data.results.map(async (p, index) => {
-        const details = await axios.get(p.url);
-        const d = details.data;
+      batch.map(async (p, index) => {
+        const d = (await axios.get(p.url)).data;
 
-        // Pokémon types
         const pokemonTypes = d.types.map((t) => t.type.name);
-
-        // Get valid move objects for this Pokémon
         const validMoves = d.moves
           .map((m) => {
             const id = parseInt(
@@ -60,52 +77,18 @@ async function fetchAndStoreData() {
           })
           .filter(Boolean);
 
-        // Split moves by type
-        const movesByType = {};
-        validMoves.forEach((mv) => {
-          if (!movesByType[mv.type]) movesByType[mv.type] = [];
-          movesByType[mv.type].push(mv);
-        });
-
-        let chosenMoves = [];
-
-        // 1. Pick guaranteed weak (<50) and strong (>75) move of Pokémon type
-        for (let type of pokemonTypes) {
-          const weakMoves = (movesByType[type] || []).filter(
-            (m) => m.power < 50
-          );
-          const strongMoves = (movesByType[type] || []).filter(
-            (m) => m.power > 75
-          );
-
-          if (weakMoves.length > 0)
-            chosenMoves.push(pickRandom(weakMoves, 1)[0]);
-          if (strongMoves.length > 0)
-            chosenMoves.push(pickRandom(strongMoves, 1)[0]);
-
-          if (chosenMoves.length >= 2) break; // stop once we have type-specific moves
-        }
-
-        // 2. Fill remaining moves from any valid moves
-        const remainingMoves = validMoves.filter(
-          (m) => !chosenMoves.includes(m)
+        // Pick up to 4 moves
+        const chosenMoves = pickRandom(
+          validMoves,
+          Math.min(4, validMoves.length)
         );
-        const movesNeeded = 4 - chosenMoves.length;
-        if (remainingMoves.length > 0 && movesNeeded > 0) {
-          chosenMoves.push(
-            ...pickRandom(
-              remainingMoves,
-              Math.min(movesNeeded, remainingMoves.length)
-            )
-          );
-        }
 
         const hpStat =
           d.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
         const maxHP = calculateHP(hpStat, 50);
 
         return {
-          id: index + 1,
+          id: startIndex + index + 1,
           name: d.name,
           level: 50,
           maxHP,
@@ -116,7 +99,6 @@ async function fetchAndStoreData() {
           types: pokemonTypes,
           moves: chosenMoves,
           ivs: {
-            // Individual Values (0-31, future use)
             hp: 0,
             attack: 0,
             defense: 0,
@@ -125,7 +107,6 @@ async function fetchAndStoreData() {
             speed: 0,
           },
           evs: {
-            // Effort Values (0-252 each, total 510, future use)
             hp: 0,
             attack: 0,
             defense: 0,
@@ -137,21 +118,23 @@ async function fetchAndStoreData() {
       })
     );
 
-    const data = { pokemons: pokemonDetails };
+    data.pokemons.push(...pokemonDetails);
     saveData(data);
+    console.log(`Fetched Pokémon ${startIndex + 1} to ${data.pokemons.length}`);
+
     return data;
   } catch (err) {
-    console.error("Error fetching Pokémon data:", err.message);
-    return null;
+    console.error("Error fetching Pokémon batch:", err.message);
+    return loadData();
   }
 }
 
-function calculateHP(base, level, iv = 0, ev = 0) {
-  return (
-    Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) +
-    level +
-    10
-  );
-}
-
-module.exports = { saveData, loadData, fetchAndStoreData };
+// ------------------------
+// Exports
+// ------------------------
+module.exports = {
+  saveData,
+  loadData,
+  fetchNextBatch,
+  calculateHP,
+};
