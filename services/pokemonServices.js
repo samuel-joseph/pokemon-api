@@ -100,15 +100,39 @@ async function fetchAndStoreData() {
           );
         }
 
+        const hpStat =
+          d.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
+        const maxHP = calculateHP(hpStat, 50);
+
         return {
           id: index + 1,
           name: d.name,
+          level: 50,
+          maxHP,
           image: d.sprites.front_default,
           sprite_front: d.sprites.other.showdown.front_default,
           sprite_back: d.sprites.other.showdown.back_default,
           stats: d.stats.map((s) => ({ name: s.stat.name, base: s.base_stat })),
           types: pokemonTypes,
           moves: chosenMoves,
+          ivs: {
+            // Individual Values (0-31, future use)
+            hp: 0,
+            attack: 0,
+            defense: 0,
+            spAttack: 0,
+            spDefense: 0,
+            speed: 0,
+          },
+          evs: {
+            // Effort Values (0-252 each, total 510, future use)
+            hp: 0,
+            attack: 0,
+            defense: 0,
+            spAttack: 0,
+            spDefense: 0,
+            speed: 0,
+          },
         };
       })
     );
@@ -120,6 +144,14 @@ async function fetchAndStoreData() {
     console.error("Error fetching Pokémon data:", err.message);
     return null;
   }
+}
+
+function calculateHP(base, level, iv = 0, ev = 0) {
+  return (
+    Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) +
+    level +
+    10
+  );
 }
 
 module.exports = { saveData, loadData, fetchAndStoreData };

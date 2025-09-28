@@ -27,8 +27,10 @@ ensureData().then(() => {
   const port = 3000;
 
   // Your routes here
-  const pokemonRoutes = require("./routes/pokemonRoutes");
-  app.use("/pokemon", pokemonRoutes);
+  // const pokemonRoutes = require("./routes/pokemonRoutes");
+  // app.use("/pokemon", pokemonRoutes);
+
+  app.use("/api", require("./routes/pokemonRoutes"));
 
   app.listen(port, () => {
     console.log(`✅ Server running at http://localhost:${port}`);
