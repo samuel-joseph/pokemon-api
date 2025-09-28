@@ -24,7 +24,7 @@ async function ensureData() {
 ensureData().then(() => {
   const express = require("express");
   const app = express();
-  const port = 3000;
+  const PORT = process.env.PORT || 3000;
 
   // Your routes here
   // const pokemonRoutes = require("./routes/pokemonRoutes");
@@ -32,7 +32,7 @@ ensureData().then(() => {
 
   app.use("/api", require("./routes/pokemonRoutes"));
 
-  app.listen(port, () => {
-    console.log(`✅ Server running at http://localhost:${port}`);
+  app.listen(PORT, () => {
+    console.log(`✅ Server running at http://localhost:${PORT}`);
   });
 });
