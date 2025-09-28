@@ -59,6 +59,8 @@ function startServer() {
 
   app.use("/api", require("./routes/pokemonRoutes"));
 
+  app.get("/healthz", (req, res) => res.status(200).send("ok"));
+
   app.listen(PORT, () => {
     console.log(`✅ Server running at http://localhost:${PORT}`);
 
