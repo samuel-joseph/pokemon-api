@@ -40,7 +40,7 @@ function startIncrementalPokemon() {
   const interval = setInterval(async () => {
     try {
       const data = await fetchNextBatch();
-      if (data.pokemons.length >= 905) {
+      if (data.pokemons.length >= 621) {
         console.log("✅ All 905 Pokémon have been fetched!");
         clearInterval(interval);
       }

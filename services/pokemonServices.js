@@ -51,7 +51,7 @@ async function fetchNextBatch() {
 
     // Fetch Pokémon list
     const listResponse = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=905"
+      "https://pokeapi.co/api/v2/pokemon?limit=721"
     );
     const allPokemon = listResponse.data.results;
 

@@ -7,7 +7,7 @@ const MOVES_FILE = path.join(__dirname, "../moves.json");
 async function fetchAllMoves() {
   try {
     const moveListRes = await axios.get(
-      "https://pokeapi.co/api/v2/move?limit=900"
+      "https://pokeapi.co/api/v2/move?limit=621"
     ); // adjust limit if needed
     const moves = moveListRes.data.results;
 
