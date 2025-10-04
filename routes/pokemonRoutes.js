@@ -15,4 +15,8 @@ router.get("/move/:id", pokemonController.getAllMoves);
 
 router.get("/move", pokemonController.getAllMoves);
 
+router.get("/npc", pokemonController.getNpc);
+
+router.get("/npc/:id", pokemonController.getNpc);
+
 module.exports = router;

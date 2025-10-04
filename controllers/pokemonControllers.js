@@ -1,6 +1,7 @@
 const {
   loadData,
   loadMoves,
+  loadNpc,
   fetchNextBatch,
 } = require("../services/pokemonServices");
 const {
@@ -100,8 +101,37 @@ function getRegionPokemons(req, res) {
   res.json({ region: regionName, pokemons });
 }
 
+async function getNpc(req, res) {
+  const data = loadNpc();
+  if (!data || data.length === 0) {
+    return res.status(500).json({ error: "NPC data not loaded" });
+  }
+
+  const idOrRegion = req.params.id; // undefined if just /npc
+
+  if (idOrRegion) {
+    // Return single NPC by region name or numeric id
+    const npc = data.find(
+      (n, index) =>
+        n.region.toLowerCase() === idOrRegion.toLowerCase() ||
+        n.id === parseInt(idOrRegion, 10) ||
+        index === parseInt(idOrRegion, 10) // optional: index-based
+    );
+
+    if (!npc) {
+      return res.status(404).json({ error: `NPC '${idOrRegion}' not found` });
+    }
+
+    return res.json(npc);
+  }
+
+  // If no id param, return all NPCs
+  return res.json(data);
+}
+
 module.exports = {
   getAllPokemons,
   getRegionPokemons,
   getAllMoves,
+  getNpc,
 };

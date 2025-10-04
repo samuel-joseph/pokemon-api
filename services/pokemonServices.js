@@ -2,8 +2,9 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 
-const DATA_FILE = path.join(__dirname, "..", "pokemon.json");
-const MOVES_FILE = path.join(__dirname, "..", "moves.json");
+const DATA_FILE = path.join(__dirname, "..", "data/pokemon.json");
+const MOVES_FILE = path.join(__dirname, "..", "data/moves.json");
+const NPC_FILE = path.join(__dirname, "..", "data/npc.json");
 
 const BATCH_SIZE = 150;
 const POKEMON_LEVEL = 75;
@@ -13,6 +14,13 @@ const POKEMON_LEVEL = 75;
 // ------------------------
 function saveData(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+}
+
+function loadNpc() {
+  if (fs.existsSync(NPC_FILE)) {
+    return JSON.parse(fs.readFileSync(NPC_FILE, "utf-8"));
+  }
+  return [];
 }
 
 function loadData() {
@@ -68,6 +76,8 @@ async function fetchNextBatch() {
         const d = (await axios.get(p.url)).data;
 
         const pokemonTypes = d.types.map((t) => t.type.name);
+
+        // Map moves
         const validMoves = d.moves
           .map((m) => {
             const id = parseInt(
@@ -78,11 +88,31 @@ async function fetchNextBatch() {
           })
           .filter(Boolean);
 
-        // Pick up to 4 moves
-        const chosenMoves = pickRandom(
-          validMoves,
-          Math.min(4, validMoves.length)
+        // ------------------------
+        // Enforce at least 1 STAB move (type match & power > 50)
+        // ------------------------
+        const stabMoves = validMoves.filter(
+          (mv) =>
+            mv.power &&
+            mv.power > 50 &&
+            pokemonTypes.some((t) => t.toLowerCase() === mv.type.toLowerCase())
         );
+
+        let chosenMoves = [];
+
+        if (stabMoves.length > 0) {
+          const stabMove = pickRandom(stabMoves, 1);
+          chosenMoves.push(...stabMove);
+
+          const remaining = pickRandom(
+            validMoves.filter((mv) => mv !== stabMove[0]),
+            Math.min(3, validMoves.length - 1)
+          );
+          chosenMoves.push(...remaining);
+        } else {
+          // fallback
+          chosenMoves = pickRandom(validMoves, Math.min(4, validMoves.length));
+        }
 
         const hpStat =
           d.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
@@ -139,4 +169,5 @@ module.exports = {
   fetchNextBatch,
   calculateHP,
   loadMoves,
+  loadNpc,
 };

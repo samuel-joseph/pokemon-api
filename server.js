@@ -1,12 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
-
 const { fetchNextBatch } = require("./services/pokemonServices");
 const { fetchAllMoves } = require("./script/fetchMoves");
+const { buildNpcData } = require("./script/buildNpc");
 
-const MOVES_FILE = path.join(__dirname, "moves.json");
-const POKEMON_FILE = path.join(__dirname, "pokemon.json");
+// Path constants
+const MOVES_FILE = path.join(__dirname, "data/moves.json");
+const POKEMON_FILE = path.join(__dirname, "data/pokemon.json");
+const NPC_FILE = path.join(__dirname, "data/npc.json");
 
 // ------------------------
 // Ensure moves.json exists
@@ -26,6 +28,24 @@ async function ensureMoves() {
 }
 
 // ------------------------
+// Ensure npc.json exists
+// ------------------------
+async function ensureNpc() {
+  if (!fs.existsSync(NPC_FILE)) {
+    console.log("npc.json not found. Generating...");
+    try {
+      // Import and run the buildNpc script
+      await buildNpcData(); // Make sure buildNpc exports a function returning a promise
+      console.log("✅ npc.json generated.");
+    } catch (err) {
+      console.error("❌ Failed to generate npc.json:", err);
+    }
+  } else {
+    console.log("npc.json found. Skipping generation.");
+  }
+}
+
+// ------------------------
 // Incremental Pokémon fetching
 // ------------------------
 function startIncrementalPokemon() {
@@ -40,7 +60,7 @@ function startIncrementalPokemon() {
   const interval = setInterval(async () => {
     try {
       const data = await fetchNextBatch();
-      if (data.pokemons.length >= 621) {
+      if (data.pokemons.length >= 905) {
         console.log("✅ All 905 Pokémon have been fetched!");
         clearInterval(interval);
       }
@@ -53,20 +73,23 @@ function startIncrementalPokemon() {
 // ------------------------
 // Server startup
 // ------------------------
-function startServer() {
+async function startServer() {
   const app = express();
+  app.cors = require("cors");
+  app.use(app.cors());
   const PORT = process.env.PORT || 3000;
 
   app.use("/api", require("./routes/pokemonRoutes"));
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
 
-  app.listen(PORT, () => {
+  app.listen(PORT, async () => {
     console.log(`✅ Server running at http://localhost:${PORT}`);
 
     // Background tasks
-    ensureMoves().catch(console.error);
+    await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
+    await ensureNpc();
   });
 }
 
