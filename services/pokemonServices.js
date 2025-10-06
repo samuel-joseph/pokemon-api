@@ -123,6 +123,7 @@ async function fetchNextBatch() {
           name: d.name,
           level: POKEMON_LEVEL,
           maxHP,
+          currentHP: maxHP,
           image: d.sprites.front_default,
           sprite_front: d.sprites.other.showdown.front_default,
           sprite_back: d.sprites.other.showdown.back_default,
