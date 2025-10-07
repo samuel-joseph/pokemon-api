@@ -142,7 +142,7 @@ const getLeaderBoard = async (req, res) => {
 
   if (name) {
     const leaderboard = data.find(
-      (response) => response.name.toLowerCase() === response.toLowerCase()
+      (response) => response.name.toLowerCase() === name.toLowerCase()
     );
     if (!leaderboard)
       return res.status(404).json({ error: "Leaderboard data not found" });
@@ -156,8 +156,8 @@ const addLeaderBoard = (req, res) => {
   try {
     const data = loadLeaderboard() || [];
 
-    const { name, wins } = req.body;
-    if (!name || typeof wins !== "object") {
+    const { name, record } = req.body;
+    if (!name || !Array.isArray(record)) {
       return res.status(400).json({ error: "Invalid payload" });
     }
 
@@ -171,16 +171,41 @@ const addLeaderBoard = (req, res) => {
       });
     }
 
-    data.push({ name, wins });
+    data.push({ name, record });
     saveLeaderboard(data);
 
     res.status(201).json({
       message: "Added successfully",
-      data: { name, wins },
+      data: { name, record },
     });
   } catch (err) {
     console.error("addLeaderBoard error:", err);
     res.status(500).json({ error: "Failed to write leaderboard" });
+  }
+};
+
+const updateLeaderBoard = (req, res) => {
+  try {
+    const name = req.params.name.toLowerCase();
+    const { record } = req.body;
+
+    if (!record || !Array.isArray(record)) {
+      return res.status(400).json({ error: "Invalid payload" });
+    }
+
+    const leaderboard = loadLeaderboard();
+    const index = leaderboard.findIndex((p) => p.name.toLowerCase() === name);
+
+    if (index === -1) {
+      return res.status(404).json({ error: "Player not found" });
+    }
+
+    leaderboard[index].record = record;
+    saveLeaderboard(leaderboard);
+
+    res.json({ message: "Updated successfully", data: leaderboard[index] });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to update leaderboard" });
   }
 };
 
@@ -191,4 +216,5 @@ module.exports = {
   getNpc,
   getLeaderBoard,
   addLeaderBoard,
+  updateLeaderBoard,
 };

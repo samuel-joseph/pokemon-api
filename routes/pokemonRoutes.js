@@ -25,6 +25,6 @@ router.get("/leaderboard", pokemonController.getLeaderBoard);
 
 router.post("/leaderboard", pokemonController.addLeaderBoard);
 
-// router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
+router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
 
 module.exports = router;
