@@ -2,7 +2,9 @@ const {
   loadData,
   loadMoves,
   loadNpc,
+  loadLeaderboard,
   fetchNextBatch,
+  saveLeaderboard,
 } = require("../services/pokemonServices");
 const {
   getRegionPokemons: getRegionPokemonsService,
@@ -129,9 +131,64 @@ async function getNpc(req, res) {
   return res.json(data);
 }
 
+const getLeaderBoard = async (req, res) => {
+  const data = loadLeaderboard();
+
+  if (!data) {
+    return res.status(500).json({ error: "Leaderboard data not loaded" });
+  }
+
+  const name = req.params.name;
+
+  if (name) {
+    const leaderboard = data.find(
+      (response) => response.name.toLowerCase() === response.toLowerCase()
+    );
+    if (!leaderboard)
+      return res.status(404).json({ error: "Leaderboard data not found" });
+
+    return res.json(leaderboard);
+  }
+  return res.json(data);
+};
+
+const addLeaderBoard = (req, res) => {
+  try {
+    const data = loadLeaderboard() || [];
+
+    const { name, wins } = req.body;
+    if (!name || typeof wins !== "object") {
+      return res.status(400).json({ error: "Invalid payload" });
+    }
+
+    const match = data.find(
+      (player) => player.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (match) {
+      return res.status(409).json({
+        error: `Name '${name}' already exists, choose another name.`,
+      });
+    }
+
+    data.push({ name, wins });
+    saveLeaderboard(data);
+
+    res.status(201).json({
+      message: "Added successfully",
+      data: { name, wins },
+    });
+  } catch (err) {
+    console.error("addLeaderBoard error:", err);
+    res.status(500).json({ error: "Failed to write leaderboard" });
+  }
+};
+
 module.exports = {
   getAllPokemons,
   getRegionPokemons,
   getAllMoves,
   getNpc,
+  getLeaderBoard,
+  addLeaderBoard,
 };

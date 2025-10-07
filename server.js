@@ -4,16 +4,18 @@ const express = require("express");
 const { fetchNextBatch } = require("./services/pokemonServices");
 const { fetchAllMoves } = require("./script/fetchMoves");
 const { buildNpcData } = require("./script/buildNpc");
+const bodyParser = require("body-parser");
 
 // Path constants
 const MOVES_FILE = path.join(__dirname, "data/moves.json");
 const POKEMON_FILE = path.join(__dirname, "data/pokemon.json");
 const NPC_FILE = path.join(__dirname, "data/npc.json");
+const LEADERBOARD_FILE = path.join(__dirname, "data/leaderboard.json");
 
 // ------------------------
 // Ensure moves.json exists
 // ------------------------
-async function ensureMoves() {
+const ensureMoves = async () => {
   if (!fs.existsSync(MOVES_FILE)) {
     console.log("moves.json not found. Generating in background...");
     try {
@@ -25,7 +27,14 @@ async function ensureMoves() {
   } else {
     console.log("moves.json found. Skipping generation.");
   }
-}
+};
+
+const ensureLeaderboards = async () => {
+  if (!fs.existsSync(LEADERBOARD_FILE)) {
+    fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify([], null, 2));
+    console.log("✅ leaderboard.json created");
+  }
+};
 
 // ------------------------
 // Ensure npc.json exists
@@ -79,6 +88,8 @@ async function startServer() {
   app.use(app.cors());
   const PORT = process.env.PORT || 3000;
 
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use("/api", require("./routes/pokemonRoutes"));
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
@@ -90,6 +101,7 @@ async function startServer() {
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();
+    await ensureLeaderboards();
   });
 }
 

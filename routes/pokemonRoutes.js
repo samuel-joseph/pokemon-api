@@ -19,4 +19,12 @@ router.get("/npc", pokemonController.getNpc);
 
 router.get("/npc/:id", pokemonController.getNpc);
 
+router.get("/leaderboard/:name", pokemonController.getLeaderBoard);
+
+router.get("/leaderboard", pokemonController.getLeaderBoard);
+
+router.post("/leaderboard", pokemonController.addLeaderBoard);
+
+// router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
+
 module.exports = router;

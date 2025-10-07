@@ -5,6 +5,7 @@ const path = require("path");
 const DATA_FILE = path.join(__dirname, "..", "data/pokemon.json");
 const MOVES_FILE = path.join(__dirname, "..", "data/moves.json");
 const NPC_FILE = path.join(__dirname, "..", "data/npc.json");
+const LEADERBOARD_FILE = path.join(__dirname, "..", "data/leaderboard.json");
 
 const BATCH_SIZE = 150;
 const POKEMON_LEVEL = 75;
@@ -12,6 +13,16 @@ const POKEMON_LEVEL = 75;
 // ------------------------
 // Helpers
 // ------------------------
+
+const loadLeaderboard = () => {
+  const data = fs.readFileSync(LEADERBOARD_FILE, "utf8");
+  return JSON.parse(data);
+};
+
+const saveLeaderboard = (data) => {
+  fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(data, null, 2));
+};
+
 function saveData(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
@@ -171,4 +182,6 @@ module.exports = {
   calculateHP,
   loadMoves,
   loadNpc,
+  loadLeaderboard,
+  saveLeaderboard,
 };
