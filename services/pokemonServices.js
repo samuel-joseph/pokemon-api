@@ -1,6 +1,11 @@
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+import axios from "axios";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Fix for __dirname in ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const DATA_FILE = path.join(__dirname, "..", "data/pokemon.json");
 const MOVES_FILE = path.join(__dirname, "..", "data/moves.json");
@@ -14,45 +19,45 @@ const POKEMON_LEVEL = 75;
 // Helpers
 // ------------------------
 
-const loadLeaderboard = () => {
+export const loadLeaderboard = () => {
   const data = fs.readFileSync(LEADERBOARD_FILE, "utf8");
   return JSON.parse(data);
 };
 
-const saveLeaderboard = (data) => {
+export const saveLeaderboard = (data) => {
   fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(data, null, 2));
 };
 
-function saveData(data) {
+export function saveData(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-function loadNpc() {
+export function loadNpc() {
   if (fs.existsSync(NPC_FILE)) {
     return JSON.parse(fs.readFileSync(NPC_FILE, "utf-8"));
   }
   return [];
 }
 
-function loadData() {
+export function loadData() {
   if (fs.existsSync(DATA_FILE)) {
     return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
   }
   return { pokemons: [] };
 }
 
-function loadMoves() {
+export function loadMoves() {
   if (fs.existsSync(MOVES_FILE)) {
     return JSON.parse(fs.readFileSync(MOVES_FILE, "utf-8"));
   }
   return {};
 }
 
-function pickRandom(arr, count) {
+export function pickRandom(arr, count) {
   return arr.sort(() => 0.5 - Math.random()).slice(0, count);
 }
 
-function calculateHP(base, level, iv = 0, ev = 0) {
+export function calculateHP(base, level, iv = 0, ev = 0) {
   return (
     Math.floor(((2 * base + iv + Math.floor(ev / 4)) * level) / 100) +
     level +
@@ -63,13 +68,12 @@ function calculateHP(base, level, iv = 0, ev = 0) {
 // ------------------------
 // Incremental Fetch
 // ------------------------
-async function fetchNextBatch() {
+export async function fetchNextBatch() {
   try {
     const data = loadData();
     const startIndex = data.pokemons.length;
     const movesData = loadMoves();
 
-    // Fetch Pokémon list
     const listResponse = await axios.get(
       "https://pokeapi.co/api/v2/pokemon?limit=905"
     );
@@ -87,8 +91,6 @@ async function fetchNextBatch() {
         const d = (await axios.get(p.url)).data;
 
         const pokemonTypes = d.types.map((t) => t.type.name);
-
-        // Map moves
         const validMoves = d.moves
           .map((m) => {
             const id = parseInt(
@@ -99,9 +101,6 @@ async function fetchNextBatch() {
           })
           .filter(Boolean);
 
-        // ------------------------
-        // Enforce at least 1 STAB move (type match & power > 50)
-        // ------------------------
         const stabMoves = validMoves.filter(
           (mv) =>
             mv.power &&
@@ -110,7 +109,6 @@ async function fetchNextBatch() {
         );
 
         let chosenMoves = [];
-
         if (stabMoves.length > 0) {
           const stabMove = pickRandom(stabMoves, 1);
           chosenMoves.push(...stabMove);
@@ -121,7 +119,6 @@ async function fetchNextBatch() {
           );
           chosenMoves.push(...remaining);
         } else {
-          // fallback
           chosenMoves = pickRandom(validMoves, Math.min(4, validMoves.length));
         }
 
@@ -164,24 +161,9 @@ async function fetchNextBatch() {
     data.pokemons.push(...pokemonDetails);
     saveData(data);
     console.log(`Fetched Pokémon ${startIndex + 1} to ${data.pokemons.length}`);
-
     return data;
   } catch (err) {
     console.error("Error fetching Pokémon batch:", err.message);
     return loadData();
   }
 }
-
-// ------------------------
-// Exports
-// ------------------------
-module.exports = {
-  saveData,
-  loadData,
-  fetchNextBatch,
-  calculateHP,
-  loadMoves,
-  loadNpc,
-  loadLeaderboard,
-  saveLeaderboard,
-};

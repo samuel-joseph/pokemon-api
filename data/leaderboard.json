@@ -4,5 +4,1146 @@
     "wins": {
       "kanto": 1
     }
+  },
+  {
+    "name": "samel",
+    "record": [
+      {
+        "region": "kanto",
+        "win": 1,
+        "pokemon": [
+          {
+            "id": 3,
+            "name": "venusaur",
+            "level": 75,
+            "maxHP": 205,
+            "currentHP": 205,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/3.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/3.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 80
+              },
+              {
+                "name": "attack",
+                "base": 82
+              },
+              {
+                "name": "defense",
+                "base": 83
+              },
+              {
+                "name": "special-attack",
+                "base": 100
+              },
+              {
+                "name": "special-defense",
+                "base": 100
+              },
+              {
+                "name": "speed",
+                "base": 80
+              }
+            ],
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "razor-leaf",
+                "type": "grass",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 55,
+                "accuracy": 95,
+                "pp": 25,
+                "crit_rate": 1,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Has an increased chance for a critical hit."
+              },
+              {
+                "name": "rock-smash",
+                "type": "fighting",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 40,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage+lower",
+                "stat_changes": [
+                  {
+                    "change": -1,
+                    "stat": {
+                      "name": "defense",
+                      "url": "https://pokeapi.co/api/v2/stat/3/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 50,
+                "effect_entries": "Has a 50% chance to lower the target’s Defense by one stage."
+              },
+              {
+                "name": "facade",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": 100,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Power doubles if user is burned, paralyzed, or poisoned."
+              },
+              {
+                "name": "rock-climb",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 90,
+                "accuracy": 85,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "confusion",
+                "ailment_chance": 20,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 5,
+                "min_hits": 0,
+                "min_turns": 2,
+                "effect_chance": 20,
+                "effect_entries": "Has a 20% chance to confuse the target."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 9,
+            "name": "blastoise",
+            "level": 75,
+            "maxHP": 203,
+            "currentHP": 203,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/9.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/9.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 79
+              },
+              {
+                "name": "attack",
+                "base": 83
+              },
+              {
+                "name": "defense",
+                "base": 100
+              },
+              {
+                "name": "special-attack",
+                "base": 85
+              },
+              {
+                "name": "special-defense",
+                "base": 105
+              },
+              {
+                "name": "speed",
+                "base": 78
+              }
+            ],
+            "types": [
+              "water"
+            ],
+            "moves": [
+              {
+                "name": "hydro-pump",
+                "type": "water",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 110,
+                "accuracy": 80,
+                "pp": 5,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              },
+              {
+                "name": "avalanche",
+                "type": "ice",
+                "priority": -4,
+                "damage_class": "physical",
+                "power": 60,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts double damage if the user takes damage before attacking this turn."
+              },
+              {
+                "name": "bite",
+                "type": "dark",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 60,
+                "accuracy": 100,
+                "pp": 25,
+                "crit_rate": 0,
+                "flint_chance": 30,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 30,
+                "effect_entries": "Has a 30% chance to make the target flinch."
+              },
+              {
+                "name": "terrain-pulse",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 50,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 22,
+            "name": "fearow",
+            "level": 75,
+            "maxHP": 182,
+            "currentHP": 182,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/22.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/22.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 65
+              },
+              {
+                "name": "attack",
+                "base": 90
+              },
+              {
+                "name": "defense",
+                "base": 65
+              },
+              {
+                "name": "special-attack",
+                "base": 61
+              },
+              {
+                "name": "special-defense",
+                "base": 61
+              },
+              {
+                "name": "speed",
+                "base": 100
+              }
+            ],
+            "types": [
+              "normal",
+              "flying"
+            ],
+            "moves": [
+              {
+                "name": "razor-wind",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 80,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 1,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Requires a turn to charge before attacking."
+              },
+              {
+                "name": "steel-wing",
+                "type": "steel",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": 90,
+                "pp": 25,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage+raise",
+                "stat_changes": [
+                  {
+                    "change": 1,
+                    "stat": {
+                      "name": "defense",
+                      "url": "https://pokeapi.co/api/v2/stat/3/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to raise the user’s Defense by one stage."
+              },
+              {
+                "name": "throat-chop",
+                "type": "dark",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 80,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "silence",
+                "ailment_chance": 100,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 2,
+                "min_hits": 0,
+                "min_turns": 2,
+                "effect_chance": 100,
+                "effect_entries": "Prevents the target from using sound-based moves for two turns."
+              },
+              {
+                "name": "peck",
+                "type": "flying",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 35,
+                "accuracy": 100,
+                "pp": 35,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 59,
+            "name": "arcanine",
+            "level": 75,
+            "maxHP": 220,
+            "currentHP": 52,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/59.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/59.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 90
+              },
+              {
+                "name": "attack",
+                "base": 110
+              },
+              {
+                "name": "defense",
+                "base": 80
+              },
+              {
+                "name": "special-attack",
+                "base": 100
+              },
+              {
+                "name": "special-defense",
+                "base": 80
+              },
+              {
+                "name": "speed",
+                "base": 95
+              }
+            ],
+            "types": [
+              "fire"
+            ],
+            "moves": [
+              {
+                "name": "flare-blitz",
+                "type": "fire",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 120,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "burn",
+                "ailment_chance": 10,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": -33,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 10,
+                "effect_entries": "User takes 1/3 the damage inflicted in recoil.  Has a 10% chance to burn the target."
+              },
+              {
+                "name": "play-rough",
+                "type": "fairy",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 90,
+                "accuracy": 90,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage+lower",
+                "stat_changes": [
+                  {
+                    "change": -1,
+                    "stat": {
+                      "name": "attack",
+                      "url": "https://pokeapi.co/api/v2/stat/2/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to lower the target’s Attack by one stage."
+              },
+              {
+                "name": "dragon-breath",
+                "type": "dragon",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 60,
+                "accuracy": 100,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "paralysis",
+                "ailment_chance": 30,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 30,
+                "effect_entries": "Has a 30% chance to paralyze the target."
+              },
+              {
+                "name": "burn-up",
+                "type": "fire",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 130,
+                "accuracy": 100,
+                "pp": 5,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Removes the user’s fire type after inflicting damage."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 26,
+            "name": "raichu",
+            "level": 75,
+            "maxHP": 175,
+            "currentHP": 64,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/26.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/26.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 60
+              },
+              {
+                "name": "attack",
+                "base": 90
+              },
+              {
+                "name": "defense",
+                "base": 55
+              },
+              {
+                "name": "special-attack",
+                "base": 90
+              },
+              {
+                "name": "special-defense",
+                "base": 80
+              },
+              {
+                "name": "speed",
+                "base": 110
+              }
+            ],
+            "types": [
+              "electric"
+            ],
+            "moves": [
+              {
+                "name": "thunder-punch",
+                "type": "electric",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 75,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "paralysis",
+                "ailment_chance": 10,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to paralyze the target."
+              },
+              {
+                "name": "facade",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": 100,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Power doubles if user is burned, paralyzed, or poisoned."
+              },
+              {
+                "name": "dig",
+                "type": "ground",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 80,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "User digs underground, dodging all attacks, and hits next turn."
+              },
+              {
+                "name": "signal-beam",
+                "type": "bug",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 75,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "confusion",
+                "ailment_chance": 10,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 5,
+                "min_hits": 0,
+                "min_turns": 2,
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to confuse the target."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 112,
+            "name": "rhydon",
+            "level": 75,
+            "maxHP": 242,
+            "currentHP": 77,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/112.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/112.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 105
+              },
+              {
+                "name": "attack",
+                "base": 130
+              },
+              {
+                "name": "defense",
+                "base": 120
+              },
+              {
+                "name": "special-attack",
+                "base": 45
+              },
+              {
+                "name": "special-defense",
+                "base": 45
+              },
+              {
+                "name": "speed",
+                "base": 40
+              }
+            ],
+            "types": [
+              "ground",
+              "rock"
+            ],
+            "moves": [
+              {
+                "name": "meteor-beam",
+                "type": "rock",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 120,
+                "accuracy": 90,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 100,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 100,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              },
+              {
+                "name": "headbutt",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 30,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 30,
+                "effect_entries": "Has a 30% chance to make the target flinch."
+              },
+              {
+                "name": "crunch",
+                "type": "dark",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 80,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage+lower",
+                "stat_changes": [
+                  {
+                    "change": -1,
+                    "stat": {
+                      "name": "defense",
+                      "url": "https://pokeapi.co/api/v2/stat/3/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 20,
+                "effect_entries": "Has a 20% chance to lower the target’s Defense by one stage."
+              },
+              {
+                "name": "smart-strike",
+                "type": "steel",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": null,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Never misses."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          },
+          {
+            "id": 3,
+            "name": "venusaur",
+            "level": 75,
+            "maxHP": 205,
+            "currentHP": 66,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/3.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/3.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 80
+              },
+              {
+                "name": "attack",
+                "base": 82
+              },
+              {
+                "name": "defense",
+                "base": 83
+              },
+              {
+                "name": "special-attack",
+                "base": 100
+              },
+              {
+                "name": "special-defense",
+                "base": 100
+              },
+              {
+                "name": "speed",
+                "base": 80
+              }
+            ],
+            "types": [
+              "grass",
+              "poison"
+            ],
+            "moves": [
+              {
+                "name": "razor-leaf",
+                "type": "grass",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 55,
+                "accuracy": 95,
+                "pp": 25,
+                "crit_rate": 1,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Has an increased chance for a critical hit."
+              },
+              {
+                "name": "rock-smash",
+                "type": "fighting",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 40,
+                "accuracy": 100,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage+lower",
+                "stat_changes": [
+                  {
+                    "change": -1,
+                    "stat": {
+                      "name": "defense",
+                      "url": "https://pokeapi.co/api/v2/stat/3/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 50,
+                "effect_entries": "Has a 50% chance to lower the target’s Defense by one stage."
+              },
+              {
+                "name": "facade",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 70,
+                "accuracy": 100,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Power doubles if user is burned, paralyzed, or poisoned."
+              },
+              {
+                "name": "rock-climb",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 90,
+                "accuracy": 85,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "confusion",
+                "ailment_chance": 20,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 5,
+                "min_hits": 0,
+                "min_turns": 2,
+                "effect_chance": 20,
+                "effect_entries": "Has a 20% chance to confuse the target."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "mel",
+    "record": [
+      {
+        "region": "kanto",
+        "win": 1,
+        "pokemon": []
+      },
+      {
+        "region": "johto",
+        "win": 1,
+        "pokemon": []
+      }
+    ]
   }
 ]

@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import * as pokemonController from "../controllers/pokemonControllers.js";
+
 const router = express.Router();
-const pokemonController = require("../controllers/pokemonControllers");
 
 // Get all Pokémon
 router.get("/pokemon", pokemonController.getAllPokemons);
@@ -11,20 +12,27 @@ router.get("/pokemon/:id", pokemonController.getAllPokemons);
 // Get Pokémon by region
 router.get("/region/:regionId", pokemonController.getRegionPokemons);
 
-router.get("/move/:id", pokemonController.getAllMoves);
-
+// Get all moves
 router.get("/move", pokemonController.getAllMoves);
 
+// Get a single move by ID
+router.get("/move/:id", pokemonController.getAllMoves);
+
+// Get all NPCs
 router.get("/npc", pokemonController.getNpc);
 
+// Get single NPC by ID
 router.get("/npc/:id", pokemonController.getNpc);
 
+// Get leaderboard
+router.get("/leaderboard", pokemonController.getLeaderBoard);
 router.get("/leaderboard/:name", pokemonController.getLeaderBoard);
 
-router.get("/leaderboard", pokemonController.getLeaderBoard);
-
+// Add / update leaderboard
 router.post("/leaderboard", pokemonController.addLeaderBoard);
-
 router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
 
-module.exports = router;
+// Pokémon battle narration
+router.post("/ai/comentate", pokemonController.narrateBattle);
+
+export default router; // ✅ ESM export

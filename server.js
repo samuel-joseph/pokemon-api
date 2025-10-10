@@ -1,10 +1,26 @@
-const fs = require("fs");
-const path = require("path");
-const express = require("express");
-const { fetchNextBatch } = require("./services/pokemonServices");
-const { fetchAllMoves } = require("./script/fetchMoves");
-const { buildNpcData } = require("./script/buildNpc");
-const bodyParser = require("body-parser");
+// const fs = require("fs");
+// const path = require("path");
+// const express = require("express");
+// const { fetchNextBatch } = require("./services/pokemonServices");
+// const { fetchAllMoves } = require("./script/fetchMoves");
+// const { buildNpcData } = require("./script/buildNpc");
+// const bodyParser = require("body-parser");
+
+import fs from "fs";
+import path from "path";
+import express from "express";
+import { fetchNextBatch } from "./services/pokemonServices.js";
+import { fetchAllMoves } from "./script/fetchMoves.js";
+import { buildNpcData } from "./script/buildNpc.js";
+import bodyParser from "body-parser";
+import cors from "cors";
+import pokemonRoutes from "./routes/pokemonRoutes.js";
+
+import { fileURLToPath } from "url";
+
+// Compute __filename and __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Path constants
 const MOVES_FILE = path.join(__dirname, "data/moves.json");
@@ -84,13 +100,14 @@ function startIncrementalPokemon() {
 // ------------------------
 async function startServer() {
   const app = express();
-  app.cors = require("cors");
-  app.use(app.cors());
+  // app.cors = require("cors");
+  app.use(cors());
   const PORT = process.env.PORT || 3000;
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
-  app.use("/api", require("./routes/pokemonRoutes"));
+  // app.use("/api", require("./routes/pokemonRoutes"));
+  app.use("/api", pokemonRoutes);
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
 

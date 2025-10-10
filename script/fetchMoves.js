@@ -1,10 +1,10 @@
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+import axios from "axios";
+import fs from "fs";
+import path from "path";
 
-const MOVES_FILE = path.join(__dirname, "../data/moves.json");
+const MOVES_FILE = path.join(path.resolve(), "data/moves.json");
 
-async function fetchAllMoves() {
+export async function fetchAllMoves() {
   try {
     const moveListRes = await axios.get(
       "https://pokeapi.co/api/v2/move?limit=900"
@@ -21,7 +21,6 @@ async function fetchAllMoves() {
 
           // Only include moves with power and not status moves
           if (mv.power && mv.damage_class.name !== "status") {
-            // Get move ID from URL: https://pokeapi.co/api/v2/move/33/
             const id = parseInt(m.url.split("/").filter(Boolean).pop(), 10);
 
             allMoves[id] = {
@@ -61,7 +60,3 @@ async function fetchAllMoves() {
     console.error("Error fetching moves:", err.message);
   }
 }
-
-// fetchAllMoves();
-
-module.exports = { fetchAllMoves };

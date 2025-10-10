@@ -1,14 +1,36 @@
-const {
+// const {
+//   loadData,
+//   loadMoves,
+//   loadNpc,
+//   loadLeaderboard,
+//   fetchNextBatch,
+//   saveLeaderboard,
+// } = require("../services/pokemonServices");
+// const {
+//   getRegionPokemons: getRegionPokemonsService,
+// } = require("../services/regionService");
+
+import {
   loadData,
   loadMoves,
   loadNpc,
   loadLeaderboard,
   fetchNextBatch,
   saveLeaderboard,
-} = require("../services/pokemonServices");
-const {
-  getRegionPokemons: getRegionPokemonsService,
-} = require("../services/regionService");
+} from "../services/pokemonServices.js";
+import { getRegionPokemons as getRegionPokemonsService } from "../services/regionService.js";
+
+import dotenv from "dotenv";
+dotenv.config();
+
+// import { GoogleGenAI } from "@google/genai";
+
+import OpenAI from "openai";
+
+const ai = new OpenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+  baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
+});
 
 // ------------------------
 // Get all Pokémon
@@ -209,7 +231,39 @@ const updateLeaderBoard = (req, res) => {
   }
 };
 
-module.exports = {
+const narrateBattle = async (req, res) => {
+  const { attacker, move, defender, outcome, hpRemaining } = req.body;
+
+  const prompt = `
+You are a Pokémon battle commentator. Write one short, exciting sentence about this battle event:
+{
+  "attacker": "${attacker}",
+  "move": "${move}",
+  "defender": "${defender}",
+  "outcome": "${outcome}",
+  "hpRemaining": ${hpRemaining}
+}`;
+
+  try {
+    const response = await ai.chat.completions.create({
+      model: "gemini-2.0-flash",
+      messages: [
+        { role: "system", content: "You are a helpful assistant." },
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+    });
+    console.log("Gemini API response:", response.choices[0].message);
+    res.json({ message: response.choices[0].message.content });
+  } catch (err) {
+    console.error("Gemini API error:", err);
+    res.status(500).json({ error: "Failed to generate commentary via Gemini" });
+  }
+};
+
+export {
   getAllPokemons,
   getRegionPokemons,
   getAllMoves,
@@ -217,4 +271,5 @@ module.exports = {
   getLeaderBoard,
   addLeaderBoard,
   updateLeaderBoard,
+  narrateBattle,
 };

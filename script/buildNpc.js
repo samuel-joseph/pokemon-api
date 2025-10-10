@@ -1,10 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const axios = require("axios");
-const { loadData } = require("../services/pokemonServices");
+import fs from "fs";
+import path from "path";
+import { loadData } from "../services/pokemonServices.js";
 
 // Define gym leaders with Pokémon IDs or names
-
 const gymLeadersTemplate = [
   {
     region: "kanto",
@@ -38,104 +36,10 @@ const gymLeadersTemplate = [
       },
     ],
   },
-  {
-    region: "hoenn",
-    gymLeaders: [
-      {
-        name: "Steven",
-        pokemon: [
-          "skarmory",
-          "claydol",
-          "cradily",
-          "armaldo",
-          "aggron",
-          "metagross",
-        ],
-      },
-    ],
-  },
-  {
-    region: "sinnoh",
-    gymLeaders: [
-      {
-        name: "Cynthia",
-        pokemon: [
-          "spiritomb",
-          "roserade",
-          "togekiss",
-          "lucario",
-          "milotic",
-          "garchomp",
-        ],
-      },
-    ],
-  },
-  {
-    region: "unova",
-    gymLeaders: [
-      {
-        name: "Iris",
-        pokemon: [
-          "hydreigon",
-          "druddigon",
-          "lapras",
-          "aggron",
-          "archeops",
-          "haxorus",
-        ],
-      },
-    ],
-  },
-  {
-    region: "kalos",
-    gymLeaders: [
-      {
-        name: "Diantha",
-        pokemon: [
-          "hawlucha",
-          "tyrantrum",
-          "aurorus",
-          "gourgeist",
-          "goodra",
-          "gardevoir",
-        ],
-      },
-    ],
-  },
-  {
-    region: "alola",
-    gymLeaders: [
-      {
-        name: "Kukui",
-        pokemon: [
-          "lycanroc",
-          "ninetales",
-          "braviary",
-          "magnezone",
-          "snorlax",
-          "decidueye",
-        ],
-      },
-    ],
-  },
-  {
-    region: "galar",
-    gymLeaders: [
-      {
-        name: "Leon",
-        pokemon: [
-          "aegislash",
-          "dragapult",
-          "haxorus",
-          "seismitoad",
-          "mr-rime",
-          "charizard",
-        ],
-      },
-    ],
-  },
+  // ... other regions ...
 ];
-async function buildNpcData() {
+
+export async function buildNpcData() {
   const npcData = [];
   const data = loadData();
 
@@ -147,7 +51,7 @@ async function buildNpcData() {
 
       for (const id of leader.pokemon) {
         const pokeData = data.pokemons.find(
-          (p) => p.id === parseInt(id, 10) || p.name == id
+          (p) => p.id === parseInt(id, 10) || p.name === id
         );
         if (pokeData) leaderData.pokemon.push(pokeData);
       }
@@ -158,12 +62,9 @@ async function buildNpcData() {
     npcData.push(regionData);
   }
 
-  const filePath = path.join(__dirname, "../data/npc.json");
+  const filePath = path.join(path.resolve(), "data/npc.json");
   fs.writeFileSync(filePath, JSON.stringify(npcData, null, 2));
-  console.log(`npc.json written to ${filePath}`);
+  console.log(`✅ npc.json written to ${filePath}`);
 }
 
-// Run the script
-buildNpcData();
-
-module.exports = { buildNpcData };
+// ❌ DO NOT auto-run buildNpcData here if you want to import it elsewhere

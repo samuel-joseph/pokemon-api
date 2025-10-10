@@ -1,6 +1,6 @@
-const { loadData } = require("./pokemonServices"); // assumes loadData() returns { pokemons: [...] }
+import { loadData } from "./pokemonServices.js"; // assumes loadData() returns { pokemons: [...] }
 
-const regionMap = {
+export const regionMap = {
   kanto: { start: 1, end: 151 },
   johto: { start: 152, end: 251 },
   hoenn: { start: 252, end: 386 },
@@ -11,7 +11,7 @@ const regionMap = {
   galar: { start: 810, end: 905 },
 };
 
-function getRegionPokemons(regionName) {
+export function getRegionPokemons(regionName) {
   const data = loadData(); // load pokemon.json
   if (!data) return [];
 
@@ -23,5 +23,3 @@ function getRegionPokemons(regionName) {
     (p) => p.id >= region.start && p.id <= region.end
   );
 }
-
-module.exports = { getRegionPokemons, regionMap };
