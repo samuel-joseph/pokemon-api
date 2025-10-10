@@ -235,7 +235,7 @@ const narrateBattle = async (req, res) => {
   const { attacker, move, defender, outcome, hpRemaining } = req.body;
 
   const prompt = `
-You are a Pokémon battle commentator. Write one short, exciting sentence about this battle event:
+You are a Pokémon battle commentator. Write one very short, exciting sentence about this battle event:
 {
   "attacker": "${attacker}",
   "move": "${move}",
@@ -255,7 +255,7 @@ You are a Pokémon battle commentator. Write one short, exciting sentence about 
         },
       ],
     });
-    console.log("Gemini API response:", response.choices[0].message);
+    console.log("Gemini response:", response.choices[0].message.content);
     res.json({ message: response.choices[0].message.content });
   } catch (err) {
     console.error("Gemini API error:", err);
