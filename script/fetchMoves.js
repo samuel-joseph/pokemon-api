@@ -1,6 +1,7 @@
 import axios from "axios";
 import fs from "fs";
 import path from "path";
+import { EXCLUDED_MOVE_IDS } from "../helper/bannedMoves.js";
 
 const MOVES_FILE = path.join(path.resolve(), "data/moves.json");
 
@@ -8,7 +9,7 @@ export async function fetchAllMoves() {
   try {
     const moveListRes = await axios.get(
       "https://pokeapi.co/api/v2/move?limit=900"
-    ); // adjust limit if needed
+    );
     const moves = moveListRes.data.results;
 
     const allMoves = {};
@@ -16,14 +17,18 @@ export async function fetchAllMoves() {
     await Promise.all(
       moves.map(async (m) => {
         try {
+          const id = parseInt(m.url.split("/").filter(Boolean).pop(), 10);
+
+          // Skip excluded moves
+          // if (EXCLUDED_MOVE_IDS.includes(id)) return;
+
           const moveRes = await axios.get(m.url);
           const mv = moveRes.data;
 
           // Only include moves with power and not status moves
           if (mv.power && mv.damage_class.name !== "status") {
-            const id = parseInt(m.url.split("/").filter(Boolean).pop(), 10);
-
             allMoves[id] = {
+              id: mv.id,
               name: mv.name,
               type: mv.type.name,
               priority: mv.priority,
