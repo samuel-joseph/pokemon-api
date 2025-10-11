@@ -154,6 +154,8 @@ export async function fetchNextBatch() {
             spDefense: 0,
             speed: 0,
           },
+          charging: false,
+          recharging: false,
         };
       })
     );
