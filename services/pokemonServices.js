@@ -126,6 +126,17 @@ export async function fetchNextBatch() {
           d.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
         const maxHP = calculateHP(hpStat, POKEMON_LEVEL);
 
+        let stats = d.stats.map((s) => ({
+          name: s.stat.name,
+          base: s.base_stat,
+          stage: 0,
+        }));
+
+        stats.push(
+          { name: "accuracy", base: 100, stage: 0 },
+          { name: "evasion", base: 100, stage: 0 }
+        );
+
         return {
           id: startIndex + index + 1,
           name: d.name,
@@ -135,7 +146,7 @@ export async function fetchNextBatch() {
           image: d.sprites.front_default,
           sprite_front: d.sprites.other.showdown.front_default,
           sprite_back: d.sprites.other.showdown.back_default,
-          stats: d.stats.map((s) => ({ name: s.stat.name, base: s.base_stat })),
+          stats,
           types: pokemonTypes,
           moves: chosenMoves,
           ivs: {

@@ -26,7 +26,8 @@ export async function fetchAllMoves() {
           const mv = moveRes.data;
 
           // Only include moves with power and not status moves
-          if (mv.power && mv.damage_class.name !== "status") {
+          // if (mv.power && mv.damage_class.name !== "status") {
+          if (mv) {
             allMoves[id] = {
               id: mv.id,
               name: mv.name,
