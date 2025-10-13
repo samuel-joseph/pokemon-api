@@ -20,7 +20,7 @@ export async function fetchAllMoves() {
           const id = parseInt(m.url.split("/").filter(Boolean).pop(), 10);
 
           // Skip excluded moves
-          // if (EXCLUDED_MOVE_IDS.includes(id)) return;
+          if (EXCLUDED_MOVE_IDS.includes(id)) return;
 
           const moveRes = await axios.get(m.url);
           const mv = moveRes.data;

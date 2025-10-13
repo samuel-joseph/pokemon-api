@@ -12,10 +12,10 @@ const gymLeadersTemplate = [
         pokemon: [
           "pidgeot",
           "alakazam",
-          "rhydon",
-          "gyarados",
-          "arcanine",
+          "nidoking",
           "venusaur",
+          "rhydon",
+          "arcanine",
         ],
       },
     ],
