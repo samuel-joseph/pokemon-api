@@ -25,12 +25,16 @@ router.get("/npc", pokemonController.getNpc);
 router.get("/npc/:id", pokemonController.getNpc);
 
 // Get leaderboard
-router.get("/leaderboard", pokemonController.getLeaderBoard);
-router.get("/leaderboard/:name", pokemonController.getLeaderBoard);
+// router.get("/leaderboard", pokemonController.getLeaderBoard);
+// router.get("/leaderboard/:name", pokemonController.getLeaderBoard);
 
 // Add / update leaderboard
-router.post("/leaderboard", pokemonController.addLeaderBoard);
-router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
+// router.post("/leaderboard", pokemonController.addLeaderBoard);
+// router.put("/leaderboard/:name", pokemonController.updateLeaderBoard);
+
+//db Leaderboard
+router.post("/leaderboard", pokemonController.addRecord);
+router.get("/leaderboard", pokemonController.getRecord);
 
 // Pokémon battle narration
 router.post("/ai/comentate", pokemonController.narrateBattle);

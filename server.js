@@ -1,11 +1,3 @@
-// const fs = require("fs");
-// const path = require("path");
-// const express = require("express");
-// const { fetchNextBatch } = require("./services/pokemonServices");
-// const { fetchAllMoves } = require("./script/fetchMoves");
-// const { buildNpcData } = require("./script/buildNpc");
-// const bodyParser = require("body-parser");
-
 import fs from "fs";
 import path from "path";
 import express from "express";
@@ -15,6 +7,8 @@ import { buildNpcData } from "./script/buildNpc.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import pokemonRoutes from "./routes/pokemonRoutes.js";
+// import { MongoClient, ServerApiVersion } from "mongodb";
+import mongoose from "mongoose";
 
 import { fileURLToPath } from "url";
 
@@ -102,6 +96,39 @@ async function startServer() {
   const app = express();
   // app.cors = require("cors");
   app.use(cors());
+
+  mongoose
+    .connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then(() => {
+      console.log("mongodb connected");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  // const client = new MongoClient(process.env.MONGO_URI, {
+  //   serverApi: {
+  //     version: ServerApiVersion.v1,
+  //     strict: true,
+  //     deprecationErrors: true,
+  //   },
+  // });
+
+  // const run = async () => {
+  //   try {
+  //     await client.connect();
+  //     await client.db("admin").command({ ping: 1 });
+  //     console.log(
+  //       "Pinged your deployment. You successfully connected to MongoDB!"
+  //     );
+  //   } finally {
+  //     await client.close();
+  //   }
+  // };
+  // run.catch(console.dir);
   const PORT = process.env.PORT || 3000;
 
   app.use(bodyParser.json());
@@ -118,7 +145,7 @@ async function startServer() {
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();
-    await ensureLeaderboards();
+    // await ensureLeaderboards();
   });
 }
 

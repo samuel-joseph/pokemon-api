@@ -1,15 +1,4 @@
-// const {
-//   loadData,
-//   loadMoves,
-//   loadNpc,
-//   loadLeaderboard,
-//   fetchNextBatch,
-//   saveLeaderboard,
-// } = require("../services/pokemonServices");
-// const {
-//   getRegionPokemons: getRegionPokemonsService,
-// } = require("../services/regionService");
-
+import Record from "../models/Record.js";
 import {
   loadData,
   loadMoves,
@@ -174,62 +163,62 @@ const getLeaderBoard = async (req, res) => {
   return res.json(data);
 };
 
-const addLeaderBoard = (req, res) => {
-  try {
-    const data = loadLeaderboard() || [];
+// const addLeaderBoard = (req, res) => {
+//   try {
+//     const data = loadLeaderboard() || [];
 
-    const { name, record } = req.body;
-    if (!name || !Array.isArray(record)) {
-      return res.status(400).json({ error: "Invalid payload" });
-    }
+//     const { name, record } = req.body;
+//     if (!name || !Array.isArray(record)) {
+//       return res.status(400).json({ error: "Invalid payload" });
+//     }
 
-    const match = data.find(
-      (player) => player.name.toLowerCase() === name.toLowerCase()
-    );
+//     const match = data.find(
+//       (player) => player.name.toLowerCase() === name.toLowerCase()
+//     );
 
-    if (match) {
-      return res.status(409).json({
-        error: `Name '${name}' already exists, choose another name.`,
-      });
-    }
+//     if (match) {
+//       return res.status(409).json({
+//         error: `Name '${name}' already exists, choose another name.`,
+//       });
+//     }
 
-    data.push({ name, record });
-    saveLeaderboard(data);
+//     data.push({ name, record });
+//     saveLeaderboard(data);
 
-    res.status(201).json({
-      message: "Added successfully",
-      data: { name, record },
-    });
-  } catch (err) {
-    console.error("addLeaderBoard error:", err);
-    res.status(500).json({ error: "Failed to write leaderboard" });
-  }
-};
+//     res.status(201).json({
+//       message: "Added successfully",
+//       data: { name, record },
+//     });
+//   } catch (err) {
+//     console.error("addLeaderBoard error:", err);
+//     res.status(500).json({ error: "Failed to write leaderboard" });
+//   }
+// };
 
-const updateLeaderBoard = (req, res) => {
-  try {
-    const name = req.params.name.toLowerCase();
-    const { record } = req.body;
+// const updateLeaderBoard = (req, res) => {
+//   try {
+//     const name = req.params.name.toLowerCase();
+//     const { record } = req.body;
 
-    if (!record || !Array.isArray(record)) {
-      return res.status(400).json({ error: "Invalid payload" });
-    }
+//     if (!record || !Array.isArray(record)) {
+//       return res.status(400).json({ error: "Invalid payload" });
+//     }
 
-    const leaderboard = loadLeaderboard();
-    const index = leaderboard.findIndex((p) => p.name.toLowerCase() === name);
+//     const leaderboard = loadLeaderboard();
+//     const index = leaderboard.findIndex((p) => p.name.toLowerCase() === name);
 
-    if (index === -1) {
-      return res.status(404).json({ error: "Player not found" });
-    }
+//     if (index === -1) {
+//       return res.status(404).json({ error: "Player not found" });
+//     }
 
-    leaderboard[index].record = record;
-    saveLeaderboard(leaderboard);
+//     leaderboard[index].record = record;
+//     saveLeaderboard(leaderboard);
 
-    res.json({ message: "Updated successfully", data: leaderboard[index] });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to update leaderboard" });
-  }
-};
+//     res.json({ message: "Updated successfully", data: leaderboard[index] });
+//   } catch (err) {
+//     res.status(500).json({ error: "Failed to update leaderboard" });
+//   }
+// };
 
 const narrateBattle = async (req, res) => {
   const { attacker, move, defender, outcome, hpRemaining } = req.body;
@@ -263,13 +252,36 @@ You are a Pokémon battle commentator. Write one very short, exciting sentence a
   }
 };
 
+const addRecord = async (req, res) => {
+  try {
+    const record = new Record(req.body);
+    await record.save();
+    res.status(201).json({ message: "Record added successfully!" });
+  } catch (err) {
+    console.error("Error saving record:", err);
+    res.status(500).json({ error: "Failed to save record" });
+  }
+};
+
+const getRecord = async (req, res) => {
+  try {
+    const records = await Record.find();
+    res.json(records);
+  } catch (err) {
+    console.error("Error fetching records:", err);
+    res.status(500).json({ error: "Failed to fetch records" });
+  }
+};
+
 export {
   getAllPokemons,
   getRegionPokemons,
   getAllMoves,
   getNpc,
   getLeaderBoard,
-  addLeaderBoard,
-  updateLeaderBoard,
+  // addLeaderBoard,
+  // updateLeaderBoard,
   narrateBattle,
+  getRecord,
+  addRecord,
 };
