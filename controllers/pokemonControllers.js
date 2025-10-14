@@ -1,11 +1,9 @@
-import Record from "../models/Record.js";
 import {
   loadData,
   loadMoves,
   loadNpc,
   loadLeaderboard,
   fetchNextBatch,
-  saveLeaderboard,
 } from "../services/pokemonServices.js";
 import { getRegionPokemons as getRegionPokemonsService } from "../services/regionService.js";
 
@@ -252,84 +250,6 @@ You are a Pokémon battle commentator. Write one very short, exciting sentence a
   }
 };
 
-const addRecord = async (req, res) => {
-  try {
-    const record = new Record(req.body);
-    await record.save();
-    res.status(201).json({ message: "Record added successfully!" });
-  } catch (err) {
-    console.error("Error saving record:", err);
-    res.status(500).json({ error: "Failed to save record" });
-  }
-};
-
-const getRecord = async (req, res) => {
-  try {
-    const records = await Record.find();
-    res.json(records);
-  } catch (err) {
-    console.error("Error fetching records:", err);
-    res.status(500).json({ error: "Failed to fetch records" });
-  }
-};
-
-const updateRecord = async (req, res) => {
-  try {
-    const { name } = req.params;
-    const updatedData = req.body;
-
-    if (!name) {
-      return res.status(400).json({ error: "Name parameter is required" });
-    }
-
-    const record = await Record.findOneAndUpdate(
-      { name: name },
-      updatedData,
-      { new: true } // returns the updated document
-    );
-
-    if (!record) {
-      return res
-        .status(404)
-        .json({ error: `Record with name '${name}' not found` });
-    }
-
-    res.json({
-      message: "Record updated successfully!",
-      data: record,
-    });
-  } catch (err) {
-    console.error("Error updating record:", err);
-    res.status(500).json({ error: "Failed to update record" });
-  }
-};
-
-const deleteRecord = async (req, res) => {
-  try {
-    const { name } = req.params;
-
-    if (!name) {
-      return res.status(400).json({ error: "Name parameter is required" });
-    }
-
-    const record = await Record.findOneAndDelete({ name: name });
-
-    if (!record) {
-      return res
-        .status(404)
-        .json({ error: `Record with name '${name}' not found` });
-    }
-
-    res.json({
-      message: "Record deleted successfully!",
-      deletedRecord: record,
-    });
-  } catch (err) {
-    console.error("Error deleting record:", err);
-    res.status(500).json({ error: "Failed to delete record" });
-  }
-};
-
 export {
   getAllPokemons,
   getRegionPokemons,
@@ -339,8 +259,4 @@ export {
   // addLeaderBoard,
   // updateLeaderBoard,
   narrateBattle,
-  getRecord,
-  addRecord,
-  updateRecord,
-  deleteRecord,
 };
