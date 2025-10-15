@@ -97,7 +97,17 @@ function startIncrementalPokemon() {
 async function startServer() {
   const app = express();
   // app.cors = require("cors");
-  app.use(cors());
+  app.use(
+    cors({
+      origin: [
+        "http://localhost:5173",
+        "https://pokemon-react-weld-sigma.vercel.app/",
+      ],
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
+    })
+  );
 
   mongoose
     .connect(process.env.MONGO_URI, {
