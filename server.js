@@ -7,6 +7,7 @@ import { buildNpcData } from "./script/buildNpc.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import pokemonRoutes from "./routes/pokemonRoutes.js";
+import recordRoutes from "./routes/recordRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 // import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
@@ -137,6 +138,7 @@ async function startServer() {
   // app.use("/api", require("./routes/pokemonRoutes"));
   app.use("/api", pokemonRoutes);
   app.use("/api/auth", authRoutes);
+  app.use("/api/record", recordRoutes);
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
 

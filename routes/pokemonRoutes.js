@@ -1,7 +1,5 @@
 import express from "express";
 import * as pokemonController from "../controllers/pokemonControllers.js";
-import * as recordController from "../controllers/recordController.js";
-import { authenticate } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -25,16 +23,6 @@ router.get("/npc", pokemonController.getNpc);
 
 // Get single NPC by ID
 router.get("/npc/:id", pokemonController.getNpc);
-
-//db Leaderboard
-router.post("/leaderboard", authenticate, recordController.addRecord);
-router.get("/leaderboard", recordController.getRecord);
-router.put("/leaderboard/:name", authenticate, recordController.updateRecord);
-router.delete(
-  "/leaderboard/:name",
-  authenticate,
-  recordController.deleteRecord
-);
 
 // Pokémon battle narration
 router.post("/ai/comentate", pokemonController.narrateBattle);

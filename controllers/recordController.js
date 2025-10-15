@@ -20,6 +20,12 @@ export const addRecord = async (req, res) => {
 export const getRecord = async (req, res) => {
   try {
     const records = await Record.find();
+    const name = req.params.name;
+    if (name) {
+      const profile = records.find((data) => data.name === name.toLowerCase());
+      if (!profile) return res.json({ error: "Profile not found" });
+      return res.json(profile);
+    }
     res.json(records);
   } catch (err) {
     console.error("Error fetching records:", err);
