@@ -1,15 +1,16 @@
-import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import Record from "../models/Record.js";
+import Trainer from "../models/trainer.js";
+import Record from "../models/record.js";
+import Pokemon from "../models/pokemon.js";
 
 export const signup = async (req, res) => {
-  const { username, password, pokemonsUsed } = req.body;
   // pokemonsUsed: array of pokemon objects the player defeated Kanto leader with
 
+  const { username, password, pokemon } = req.body;
   try {
     // Check if user exists
-    const existingUser = await User.findOne({ username });
+    const existingUser = await Trainer.findOne({ username });
     if (existingUser)
       return res.status(400).json({ error: "Username already exists" });
 
@@ -17,40 +18,49 @@ export const signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create user
-    const user = new User({
+    // const user = new User({
+    //   username,
+    //   password: hashedPassword,
+    // });
+    // await user.save();
+
+    const trainer = new Trainer({
       username,
       password: hashedPassword,
     });
-    await user.save();
+    await trainer.save();
 
     // Create initial record for Kanto win
     const record = new Record({
-      user: user._id,
+      user: trainer._id,
       name: username,
       record: [
         {
           region: "kanto",
           win: 1,
-          pokemon: pokemonsUsed, // pass in the pokemons used
+          pokemon,
         },
       ],
     });
 
     await record.save();
 
+    const pokemon_db = new Pokemon({
+      trainer: trainer._id,
+      name: username,
+    });
+
+    await pokemon_db.save();
+
     // Issue JWT token
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ id: trainer._id }, process.env.JWT_SECRET, {
       expiresIn: "7d",
     });
 
     res.status(201).json({
       message: `Welcome ${username}! Your first Kanto win is recorded.`,
       token,
-      user: {
-        id: user._id,
-        username: user.username,
-      },
-      record,
+      trainer,
     });
   } catch (err) {
     console.error("Signup error:", err);
@@ -60,14 +70,14 @@ export const signup = async (req, res) => {
 
 export const loginUser = async (req, res) => {
   const { username, password } = req.body;
-  const user = await User.findOne({ username });
-  if (!user) return res.status(400).json({ error: "Invalid credentials" });
+  const trainer = await Trainer.findOne({ username });
+  if (!trainer) return res.status(400).json({ error: "Invalid credentials" });
 
-  const isMatch = await bcrypt.compare(password, user.password);
+  const isMatch = await bcrypt.compare(password, trainer.password);
   if (!isMatch) return res.status(400).json({ error: "Invalid credentials" });
 
   const token = jwt.sign(
-    { id: user._id, username: user.username },
+    { id: trainer._id, username: trainer.username },
     process.env.JWT_SECRET,
     { expiresIn: "6h" }
   );

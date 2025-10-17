@@ -5,7 +5,8 @@ import {
   loadLeaderboard,
   fetchNextBatch,
 } from "../services/pokemonServices.js";
-import { getRegionPokemons as getRegionPokemonsService } from "../services/regionService.js";
+
+import { getRegionPokemonsService } from "../services/regionService.js";
 
 import dotenv from "dotenv";
 dotenv.config();

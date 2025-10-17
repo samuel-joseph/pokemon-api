@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const moveSchema = new mongoose.Schema({
+export const moveModel = new mongoose.Schema({
   id: Number,
   name: String,
   type: String,
@@ -26,7 +26,7 @@ const moveSchema = new mongoose.Schema({
   effect_entries: String,
 });
 
-const pokemonSchema = new mongoose.Schema({
+export const pokemonModel = new mongoose.Schema({
   id: Number,
   name: String,
   level: Number,
@@ -43,7 +43,7 @@ const pokemonSchema = new mongoose.Schema({
     },
   ],
   types: [String],
-  moves: [moveSchema],
+  moves: [moveModel],
   ivs: {
     hp: Number,
     attack: Number,
@@ -65,13 +65,13 @@ const pokemonSchema = new mongoose.Schema({
 });
 
 const recordSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.ObjectId, ref: "User", required: true },
+  user: { type: mongoose.Schema.ObjectId, ref: "Trainer", required: true },
   name: { type: String, required: true },
   record: [
     {
       region: { type: String },
       win: { type: Number, default: 0 },
-      pokemon: [pokemonSchema], // ✅ store full Pokémon data here
+      pokemon: { type: [pokemonModel], required: true },
     },
   ],
 });

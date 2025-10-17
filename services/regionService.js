@@ -1,5 +1,4 @@
-import { loadData } from "./pokemonServices.js"; // assumes loadData() returns { pokemons: [...] }
-
+import { loadData } from "./pokemonServices.js";
 export const regionMap = {
   kanto: { start: 1, end: 151 },
   johto: { start: 152, end: 251 },
@@ -11,7 +10,7 @@ export const regionMap = {
   galar: { start: 810, end: 905 },
 };
 
-export function getRegionPokemons(regionName) {
+export function getRegionPokemonsService(regionName) {
   const data = loadData(); // load pokemon.json
   if (!data) return [];
 

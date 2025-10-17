@@ -101,12 +101,16 @@ export async function fetchNextBatch() {
           })
           .filter(Boolean);
 
-        const stabMoves = validMoves.filter(
-          (mv) =>
-            mv.power &&
-            mv.power > 50 &&
-            pokemonTypes.some((t) => t.toLowerCase() === mv.type.toLowerCase())
-        );
+        const stabMoves = pokemonTypes
+          .map((type) =>
+            validMoves.find(
+              (mv) =>
+                mv.power &&
+                mv.power > 50 &&
+                mv.type.toLowerCase() === type.toLowerCase()
+            )
+          )
+          .filter(Boolean);
 
         let chosenMoves = [];
         if (stabMoves.length > 0) {
