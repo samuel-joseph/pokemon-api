@@ -2,49 +2,6 @@ import Record from "../models/record.js";
 import Trainer from "../models/trainer.js";
 
 /**
- * Add a new record for a trainer
- */
-export const addRecord = async (req, res) => {
-  try {
-    const { region, win, pokemon } = req.body;
-    const userId = req.userId; // from JWT middleware
-
-    // Verify trainer exists
-    const trainer = await Trainer.findById(userId);
-    if (!trainer) {
-      return res.status(404).json({ error: "Trainer not found" });
-    }
-
-    // Check if trainer already has a record for that region
-    let record = await Record.findOne({ user: userId });
-
-    if (record) {
-      // Update existing record
-      const regionRecord = record.record.find((r) => r.region === region);
-      if (regionRecord) {
-        regionRecord.win += win ?? 1; // increment win
-        regionRecord.pokemon = pokemon ?? regionRecord.pokemon;
-      } else {
-        record.record.push({ region, win: win ?? 1, pokemon });
-      }
-    } else {
-      // Create a new record entry
-      record = new Record({
-        user: userId,
-        name: trainer.username,
-        record: [{ region, win: win ?? 1, pokemon }],
-      });
-    }
-
-    await record.save();
-    res.status(201).json({ message: "Record saved successfully!", record });
-  } catch (err) {
-    console.error("Error saving record:", err);
-    res.status(500).json({ error: "Failed to save record" });
-  }
-};
-
-/**
  * Get all records or a specific trainer's record by name
  */
 export const getRecord = async (req, res) => {
@@ -68,26 +25,29 @@ export const getRecord = async (req, res) => {
 /**
  * Update a record by trainer name
  */
-export const updateRecord = async (req, res) => {
+export const addRecordItem = async (req, res) => {
   try {
     const { name } = req.params;
-    const updatedData = req.body;
+    const newRecord = req.body; // e.g. { pokemon: "Bulbasaur", win: 0, loss: 0 }
 
-    const record = await Record.findOneAndUpdate(
+    const updatedRecord = await Record.findOneAndUpdate(
       { name: name.toLowerCase() },
-      updatedData,
+      { $push: { record: newRecord } }, // push new object into array
       { new: true }
     );
 
-    if (!record)
+    if (!updatedRecord)
       return res
         .status(404)
         .json({ error: `Record with name '${name}' not found` });
 
-    res.json({ message: "Record updated successfully!", record });
+    res.json({
+      message: "New record added successfully!",
+      record: updatedRecord,
+    });
   } catch (err) {
-    console.error("Error updating record:", err);
-    res.status(500).json({ error: "Failed to update record" });
+    console.error("Error adding new record:", err);
+    res.status(500).json({ error: "Failed to add record" });
   }
 };
 

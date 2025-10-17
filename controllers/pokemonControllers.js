@@ -162,63 +162,6 @@ const getLeaderBoard = async (req, res) => {
   return res.json(data);
 };
 
-// const addLeaderBoard = (req, res) => {
-//   try {
-//     const data = loadLeaderboard() || [];
-
-//     const { name, record } = req.body;
-//     if (!name || !Array.isArray(record)) {
-//       return res.status(400).json({ error: "Invalid payload" });
-//     }
-
-//     const match = data.find(
-//       (player) => player.name.toLowerCase() === name.toLowerCase()
-//     );
-
-//     if (match) {
-//       return res.status(409).json({
-//         error: `Name '${name}' already exists, choose another name.`,
-//       });
-//     }
-
-//     data.push({ name, record });
-//     saveLeaderboard(data);
-
-//     res.status(201).json({
-//       message: "Added successfully",
-//       data: { name, record },
-//     });
-//   } catch (err) {
-//     console.error("addLeaderBoard error:", err);
-//     res.status(500).json({ error: "Failed to write leaderboard" });
-//   }
-// };
-
-// const updateLeaderBoard = (req, res) => {
-//   try {
-//     const name = req.params.name.toLowerCase();
-//     const { record } = req.body;
-
-//     if (!record || !Array.isArray(record)) {
-//       return res.status(400).json({ error: "Invalid payload" });
-//     }
-
-//     const leaderboard = loadLeaderboard();
-//     const index = leaderboard.findIndex((p) => p.name.toLowerCase() === name);
-
-//     if (index === -1) {
-//       return res.status(404).json({ error: "Player not found" });
-//     }
-
-//     leaderboard[index].record = record;
-//     saveLeaderboard(leaderboard);
-
-//     res.json({ message: "Updated successfully", data: leaderboard[index] });
-//   } catch (err) {
-//     res.status(500).json({ error: "Failed to update leaderboard" });
-//   }
-// };
-
 const narrateBattle = async (req, res) => {
   const { attacker, move, defender, outcome, hpRemaining } = req.body;
 
