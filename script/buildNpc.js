@@ -36,7 +36,102 @@ const gymLeadersTemplate = [
       },
     ],
   },
-  // ... other regions ...
+  {
+    region: "hoenn",
+    gymLeaders: [
+      {
+        name: "Steven",
+        pokemon: [
+          "skarmory",
+          "claydol",
+          "aggron",
+          "cradily",
+          "armaldo",
+          "metagross",
+        ],
+      },
+    ],
+  },
+  {
+    region: "sinnoh",
+    gymLeaders: [
+      {
+        name: "Cynthia",
+        pokemon: [
+          "spiritomb",
+          "gastrodon",
+          "lucario",
+          "milotic",
+          "roserade",
+          "garchomp",
+        ],
+      },
+    ],
+  },
+  {
+    region: "unova",
+    gymLeaders: [
+      {
+        name: "Iris",
+        pokemon: [
+          "hydreigon",
+          "druddigon",
+          "lapras",
+          "aggron",
+          "archeops",
+          "haxorus",
+        ],
+      },
+    ],
+  },
+  {
+    region: "kalos",
+    gymLeaders: [
+      {
+        name: "Diantha",
+        pokemon: [
+          "hawlucha",
+          "tyrantrum",
+          "aurorus",
+          "gourgeist",
+          "goodra",
+          "gardevoir",
+        ],
+      },
+    ],
+  },
+  {
+    region: "alola",
+    gymLeaders: [
+      {
+        name: "Kukui",
+        pokemon: [
+          "lycanroc",
+          "braviary",
+          "magnezone",
+          "snorlax",
+          "ninetales",
+          "decidueye",
+        ],
+      },
+    ],
+  },
+  {
+    region: "galar",
+    gymLeaders: [
+      {
+        name: "Leon",
+        pokemon: [
+          "aegislash",
+          "dragapult",
+          "haxorus",
+          "rhyperior",
+          "seismitoad",
+          "charizard",
+        ],
+      },
+    ],
+  },
 ];
 
 export async function buildNpcData() {
