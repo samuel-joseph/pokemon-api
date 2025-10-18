@@ -1,4 +1,4 @@
-import Record from "../models/record.js";
+import Record from "../models/recordModel.js";
 
 /**
  * Get all records or a specific trainer's record by name

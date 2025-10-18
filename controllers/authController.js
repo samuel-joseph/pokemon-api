@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import Trainer from "../models/trainer.js";
-import Record from "../models/record.js";
+import Record from "../models/recordModel.js";
 import Pokemon from "../models/pokemon.js";
 
 export const signup = async (req, res) => {

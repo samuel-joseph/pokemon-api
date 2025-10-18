@@ -1,4 +1,4 @@
-import { pokemonModel } from "./record.js";
+import { pokemonModel } from "./recordModel.js";
 import mongoose from "mongoose";
 
 const pokemonSchema = new mongoose.Schema({
