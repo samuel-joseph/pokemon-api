@@ -1,0 +1,2325 @@
+[
+  {
+    "name": "venusaur-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10033.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10033.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 123,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 122,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "charizard-mega-x",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10034.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10034.gif",
+    "maxHP": 214,
+    "currentHP": 214,
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 111,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "charizard-mega-y",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10035.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10035.gif",
+    "maxHP": 214,
+    "currentHP": 214,
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 104,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 159,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "blastoise-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10036.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10036.gif",
+    "maxHP": 216,
+    "currentHP": 216,
+    "types": [
+      "water"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 79,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 103,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "beedrill-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10090.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10090.gif",
+    "maxHP": 194,
+    "currentHP": 194,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 40,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 15,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "pidgeot-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10073.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10073.gif",
+    "maxHP": 222,
+    "currentHP": 222,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 83,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 121,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "alakazam-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10037.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10037.gif",
+    "maxHP": 178,
+    "currentHP": 178,
+    "types": [
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 55,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 175,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "slowbro-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10071.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10071.gif",
+    "maxHP": 242,
+    "currentHP": 242,
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 180,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 30,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "gengar-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10038.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10038.gif",
+    "maxHP": 186,
+    "currentHP": 186,
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 170,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "kangaskhan-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10039.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10039.gif",
+    "maxHP": 258,
+    "currentHP": 258,
+    "types": [
+      "normal"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 125,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "pinsir-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10040.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10040.gif",
+    "maxHP": 194,
+    "currentHP": 194,
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 155,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "gyarados-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10041.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10041.gif",
+    "maxHP": 242,
+    "currentHP": 242,
+    "types": [
+      "water",
+      "dark"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 155,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 109,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 81,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "aerodactyl-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10042.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10042.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "mewtwo-mega-x",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10043.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10043.gif",
+    "maxHP": 259,
+    "currentHP": 259,
+    "types": [
+      "psychic",
+      "fighting"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 106,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 190,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 154,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "mewtwo-mega-y",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10044.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10044.gif",
+    "maxHP": 259,
+    "currentHP": 259,
+    "types": [
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 106,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 194,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "ampharos-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10045.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10045.gif",
+    "maxHP": 234,
+    "currentHP": 234,
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 165,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 45,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "steelix-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10072.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10072.gif",
+    "maxHP": 210,
+    "currentHP": 210,
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 125,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 230,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 55,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 30,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "scizor-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10046.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10046.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "heracross-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10047.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10047.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 185,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 40,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "houndoom-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10048.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10048.gif",
+    "maxHP": 210,
+    "currentHP": 210,
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "tyranitar-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10049.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10049.gif",
+    "maxHP": 250,
+    "currentHP": 250,
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 164,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 71,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "sceptile-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10065.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10065.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "blaziken-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10050.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10050.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 160,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "swampert-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10064.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10064.gif",
+    "maxHP": 250,
+    "currentHP": 250,
+    "types": [
+      "water",
+      "ground"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "gardevoir-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10051.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10051.gif",
+    "maxHP": 198,
+    "currentHP": 198,
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 68,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 165,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "sableye-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10066.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10066.gif",
+    "maxHP": 170,
+    "currentHP": 170,
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 125,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 20,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "mawile-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10052.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10052.gif",
+    "maxHP": 170,
+    "currentHP": 170,
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 125,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 55,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "aggron-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10053.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10053.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "steel"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 230,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "medicham-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10054.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10054.gif",
+    "maxHP": 186,
+    "currentHP": 186,
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 85,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "manectric-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10055.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10055.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "electric"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 135,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "sharpedo-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10070.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10070.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "water",
+      "dark"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "camerupt-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10087.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10087.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 20,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "altaria-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10067.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10067.gif",
+    "maxHP": 210,
+    "currentHP": 210,
+    "types": [
+      "dragon",
+      "fairy"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "banette-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10056.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10056.gif",
+    "maxHP": 192,
+    "currentHP": 192,
+    "types": [
+      "ghost"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 64,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 165,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 93,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 83,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 75,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "absol-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10057.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10057.gif",
+    "maxHP": 194,
+    "currentHP": 194,
+    "types": [
+      "dark"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 65,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "glalie-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10074.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10074.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "ice"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "salamence-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10089.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10089.gif",
+    "maxHP": 242,
+    "currentHP": 242,
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 90,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "metagross-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10076.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10076.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 105,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "latias-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10062.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10062.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 150,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "latios-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10063.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10063.gif",
+    "maxHP": 218,
+    "currentHP": 218,
+    "types": [
+      "dragon",
+      "psychic"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 130,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 160,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "audino-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10069.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10069.gif",
+    "maxHP": 254,
+    "currentHP": 254,
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 103,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 60,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 126,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 80,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 126,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "diancie-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10075.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10075.gif",
+    "maxHP": 170,
+    "currentHP": 170,
+    "types": [
+      "rock",
+      "fairy"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 50,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 160,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 160,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 110,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "lucario-mega",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10059.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10059.gif",
+    "maxHP": 202,
+    "currentHP": 202,
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 88,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 140,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 70,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 112,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+  {
+    "name": "greninja-ash",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10117.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10117.gif",
+    "maxHP": 205,
+    "currentHP": 205,
+    "types": [
+      "water",
+      "dark"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 72,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 145,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 67,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 153,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 71,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 132,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  }
+]

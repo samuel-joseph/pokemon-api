@@ -13,6 +13,7 @@ import authRoutes from "./routes/authRoutes.js";
 import mongoose from "mongoose";
 
 import { fileURLToPath } from "url";
+import { generateMegaData } from "./script/generateMegaData.js";
 
 // Compute __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -121,26 +122,6 @@ async function startServer() {
       console.error(err);
     });
 
-  // const client = new MongoClient(process.env.MONGO_URI, {
-  //   serverApi: {
-  //     version: ServerApiVersion.v1,
-  //     strict: true,
-  //     deprecationErrors: true,
-  //   },
-  // });
-
-  // const run = async () => {
-  //   try {
-  //     await client.connect();
-  //     await client.db("admin").command({ ping: 1 });
-  //     console.log(
-  //       "Pinged your deployment. You successfully connected to MongoDB!"
-  //     );
-  //   } finally {
-  //     await client.close();
-  //   }
-  // };
-  // run.catch(console.dir);
   const PORT = process.env.PORT || 3000;
 
   app.use(bodyParser.json());
@@ -159,7 +140,7 @@ async function startServer() {
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();
-    // await ensureLeaderboards();
+    await generateMegaData();
   });
 }
 

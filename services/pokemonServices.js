@@ -171,6 +171,8 @@ export async function fetchNextBatch() {
           },
           charging: false,
           recharging: false,
+          status: null,
+          statusCounter: 0,
         };
       })
     );
