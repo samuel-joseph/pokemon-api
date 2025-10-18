@@ -11,6 +11,7 @@ const DATA_FILE = path.join(__dirname, "..", "data/pokemon.json");
 const MOVES_FILE = path.join(__dirname, "..", "data/moves.json");
 const NPC_FILE = path.join(__dirname, "..", "data/npc.json");
 const LEADERBOARD_FILE = path.join(__dirname, "..", "data/leaderboard.json");
+const MEGA_FILE = path.join(__dirname, "..", "data/mega.json");
 
 const BATCH_SIZE = 150;
 const POKEMON_LEVEL = 75;
@@ -46,6 +47,13 @@ export function loadData() {
   return { pokemons: [] };
 }
 
+export const loadMegaData = () => {
+  if (fs.existsSync(MEGA_FILE)) {
+    return JSON.parse(fs.readFileSync(MEGA_FILE, "utf-8"));
+  }
+  return [];
+};
+
 export function loadMoves() {
   if (fs.existsSync(MOVES_FILE)) {
     return JSON.parse(fs.readFileSync(MOVES_FILE, "utf-8"));
@@ -71,6 +79,7 @@ export function calculateHP(base, level, iv = 0, ev = 0) {
 export async function fetchNextBatch() {
   try {
     const data = loadData();
+    const megaData = megaData();
     const startIndex = data.pokemons.length;
     const movesData = loadMoves();
 
