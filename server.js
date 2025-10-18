@@ -139,10 +139,10 @@ async function startServer() {
     console.log(`✅ Server running at http://localhost:${PORT}`);
 
     // Background tasks
+    await generateMegaData();
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();
-    await generateMegaData();
   });
 }
 

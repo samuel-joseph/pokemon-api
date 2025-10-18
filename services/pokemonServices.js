@@ -2,6 +2,7 @@ import axios from "axios";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { megaEvolveCapable } from "../helper/megaEvolutionLists.js";
 
 // Fix for __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -79,7 +80,6 @@ export function calculateHP(base, level, iv = 0, ev = 0) {
 export async function fetchNextBatch() {
   try {
     const data = loadData();
-    const megaData = megaData();
     const startIndex = data.pokemons.length;
     const movesData = loadMoves();
 
@@ -145,6 +145,16 @@ export async function fetchNextBatch() {
           stage: 0,
         }));
 
+        const canMega = (pokemonName) => {
+          const name = pokemonName.toLowerCase();
+
+          return megaEvolveCapable.some(
+            (m) =>
+              m.toLowerCase().startsWith(`${name}-mega`) ||
+              m.toLowerCase() === `${name}-ash`
+          );
+        };
+
         stats.push(
           { name: "accuracy", base: 100, stage: 0 },
           { name: "evasion", base: 100, stage: 0 }
@@ -180,6 +190,7 @@ export async function fetchNextBatch() {
           },
           charging: false,
           recharging: false,
+          canMega: canMega(d.name),
           status: null,
           statusCounter: 0,
         };
