@@ -1,6 +1,6 @@
 [
   {
-    "name": "venusaur-mega",
+    "name": "Mega Venusaur",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10033.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10033.gif",
     "maxHP": 218,
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "name": "charizard-mega-x",
+    "name": "Mega Charizard X",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10034.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10034.gif",
     "maxHP": 214,
@@ -106,7 +106,7 @@
     ]
   },
   {
-    "name": "charizard-mega-y",
+    "name": "Mega Charizard Y",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10035.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10035.gif",
     "maxHP": 214,
@@ -159,7 +159,7 @@
     ]
   },
   {
-    "name": "blastoise-mega",
+    "name": "Mega Blastoise",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10036.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10036.gif",
     "maxHP": 216,
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "name": "beedrill-mega",
+    "name": "Mega Beedrill",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10090.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10090.gif",
     "maxHP": 194,
@@ -264,7 +264,7 @@
     ]
   },
   {
-    "name": "pidgeot-mega",
+    "name": "Mega Pidgeot",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10073.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10073.gif",
     "maxHP": 222,
@@ -317,7 +317,7 @@
     ]
   },
   {
-    "name": "alakazam-mega",
+    "name": "Mega Alakazam",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10037.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10037.gif",
     "maxHP": 178,
@@ -369,7 +369,7 @@
     ]
   },
   {
-    "name": "slowbro-mega",
+    "name": "Mega Slowbro",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10071.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10071.gif",
     "maxHP": 242,
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "name": "gengar-mega",
+    "name": "Mega Gengar",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10038.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10038.gif",
     "maxHP": 186,
@@ -475,7 +475,7 @@
     ]
   },
   {
-    "name": "kangaskhan-mega",
+    "name": "Mega Kangaskhan",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10039.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10039.gif",
     "maxHP": 258,
@@ -527,7 +527,7 @@
     ]
   },
   {
-    "name": "pinsir-mega",
+    "name": "Mega Pinsir",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10040.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10040.gif",
     "maxHP": 194,
@@ -580,7 +580,7 @@
     ]
   },
   {
-    "name": "gyarados-mega",
+    "name": "Mega Gyarados",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10041.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10041.gif",
     "maxHP": 242,
@@ -633,7 +633,7 @@
     ]
   },
   {
-    "name": "aerodactyl-mega",
+    "name": "Mega Aerodactyl",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10042.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10042.gif",
     "maxHP": 218,
@@ -686,7 +686,7 @@
     ]
   },
   {
-    "name": "mewtwo-mega-x",
+    "name": "Mega Mewtwo X",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10043.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10043.gif",
     "maxHP": 259,
@@ -739,7 +739,7 @@
     ]
   },
   {
-    "name": "mewtwo-mega-y",
+    "name": "Mega Mewtwo Y",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10044.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10044.gif",
     "maxHP": 259,
@@ -791,7 +791,7 @@
     ]
   },
   {
-    "name": "ampharos-mega",
+    "name": "Mega Ampharos",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10045.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10045.gif",
     "maxHP": 234,
@@ -844,7 +844,7 @@
     ]
   },
   {
-    "name": "steelix-mega",
+    "name": "Mega Steelix",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10072.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10072.gif",
     "maxHP": 210,
@@ -897,7 +897,7 @@
     ]
   },
   {
-    "name": "scizor-mega",
+    "name": "Mega Scizor",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10046.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10046.gif",
     "maxHP": 202,
@@ -950,7 +950,7 @@
     ]
   },
   {
-    "name": "heracross-mega",
+    "name": "Mega Heracross",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10047.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10047.gif",
     "maxHP": 218,
@@ -1003,7 +1003,7 @@
     ]
   },
   {
-    "name": "houndoom-mega",
+    "name": "Mega Houndoom",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10048.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10048.gif",
     "maxHP": 210,
@@ -1056,7 +1056,7 @@
     ]
   },
   {
-    "name": "tyranitar-mega",
+    "name": "Mega Tyranitar",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10049.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10049.gif",
     "maxHP": 250,
@@ -1109,7 +1109,7 @@
     ]
   },
   {
-    "name": "sceptile-mega",
+    "name": "Mega Sceptile",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10065.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10065.gif",
     "maxHP": 202,
@@ -1162,7 +1162,7 @@
     ]
   },
   {
-    "name": "blaziken-mega",
+    "name": "Mega Blaziken",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10050.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10050.gif",
     "maxHP": 218,
@@ -1215,7 +1215,7 @@
     ]
   },
   {
-    "name": "swampert-mega",
+    "name": "Mega Swampert",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10064.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10064.gif",
     "maxHP": 250,
@@ -1268,7 +1268,7 @@
     ]
   },
   {
-    "name": "gardevoir-mega",
+    "name": "Mega Gardevoir",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10051.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10051.gif",
     "maxHP": 198,
@@ -1321,7 +1321,7 @@
     ]
   },
   {
-    "name": "sableye-mega",
+    "name": "Mega Sableye",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10066.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10066.gif",
     "maxHP": 170,
@@ -1374,7 +1374,7 @@
     ]
   },
   {
-    "name": "mawile-mega",
+    "name": "Mega Mawile",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10052.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10052.gif",
     "maxHP": 170,
@@ -1427,7 +1427,7 @@
     ]
   },
   {
-    "name": "aggron-mega",
+    "name": "Mega Aggron",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10053.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10053.gif",
     "maxHP": 202,
@@ -1479,7 +1479,7 @@
     ]
   },
   {
-    "name": "medicham-mega",
+    "name": "Mega Medicham",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10054.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10054.gif",
     "maxHP": 186,
@@ -1532,7 +1532,7 @@
     ]
   },
   {
-    "name": "manectric-mega",
+    "name": "Mega Manectric",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10055.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10055.gif",
     "maxHP": 202,
@@ -1584,7 +1584,7 @@
     ]
   },
   {
-    "name": "sharpedo-mega",
+    "name": "Mega Sharpedo",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10070.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10070.gif",
     "maxHP": 202,
@@ -1637,7 +1637,7 @@
     ]
   },
   {
-    "name": "camerupt-mega",
+    "name": "Mega Camerupt",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10087.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10087.gif",
     "maxHP": 202,
@@ -1690,7 +1690,7 @@
     ]
   },
   {
-    "name": "altaria-mega",
+    "name": "Mega Altaria",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10067.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10067.gif",
     "maxHP": 210,
@@ -1743,7 +1743,7 @@
     ]
   },
   {
-    "name": "banette-mega",
+    "name": "Mega Banette",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10056.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10056.gif",
     "maxHP": 192,
@@ -1795,7 +1795,7 @@
     ]
   },
   {
-    "name": "absol-mega",
+    "name": "Mega Absol",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10057.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10057.gif",
     "maxHP": 194,
@@ -1847,7 +1847,7 @@
     ]
   },
   {
-    "name": "glalie-mega",
+    "name": "Mega Glalie",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10074.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10074.gif",
     "maxHP": 218,
@@ -1899,7 +1899,7 @@
     ]
   },
   {
-    "name": "salamence-mega",
+    "name": "Mega Salamence",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10089.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10089.gif",
     "maxHP": 242,
@@ -1952,7 +1952,7 @@
     ]
   },
   {
-    "name": "metagross-mega",
+    "name": "Mega Metagross",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10076.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10076.gif",
     "maxHP": 218,
@@ -2005,7 +2005,7 @@
     ]
   },
   {
-    "name": "latias-mega",
+    "name": "Mega Latias",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10062.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10062.gif",
     "maxHP": 218,
@@ -2058,7 +2058,7 @@
     ]
   },
   {
-    "name": "latios-mega",
+    "name": "Mega Latios",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10063.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10063.gif",
     "maxHP": 218,
@@ -2111,7 +2111,7 @@
     ]
   },
   {
-    "name": "audino-mega",
+    "name": "Mega Audino",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10069.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10069.gif",
     "maxHP": 254,
@@ -2164,7 +2164,7 @@
     ]
   },
   {
-    "name": "diancie-mega",
+    "name": "Mega Diancie",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10075.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10075.gif",
     "maxHP": 170,
@@ -2217,7 +2217,7 @@
     ]
   },
   {
-    "name": "lucario-mega",
+    "name": "Mega Lucario",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10059.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10059.gif",
     "maxHP": 202,
@@ -2270,7 +2270,7 @@
     ]
   },
   {
-    "name": "greninja-ash",
+    "name": "Greninja Ash",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10117.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10117.gif",
     "maxHP": 205,
