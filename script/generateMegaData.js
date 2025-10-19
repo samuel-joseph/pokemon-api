@@ -28,7 +28,8 @@ async function getPokemonData(name) {
     { name: "evasion", base: 100, stage: 0 }
   );
   return {
-    name: formatPokemonName(data.name),
+    name: data.name,
+    mega_name: formatPokemonName(data.name),
     sprite_front: data.sprites.other.showdown.front_default,
     sprite_back: data.sprites.other.showdown.back_default,
     maxHP,
