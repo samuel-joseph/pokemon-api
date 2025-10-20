@@ -1,4 +1,5 @@
 import Pokemon from "../models/pokemon.js";
+import { loadEvolutionboard } from "../services/pokemonServices.js";
 
 export const getTrainerPokemon = async (req, res) => {
   try {
@@ -47,25 +48,69 @@ export const addTrainerPokemon = async (req, res) => {
 export const levelUpTrainerPokemon = async (req, res) => {
   try {
     const { name, pokemonName } = req.params;
+    const { levelUpCount = 1 } = req.body; // default to +1 level if not provided
 
-    const updatedTrainer = await Record.findOneAndUpdate(
-      { name: name.toLowerCase(), "pokemon.name": pokemonName },
-      { $inc: { "pokemon.$.level": 1 } },
-      { new: true }
+    // Step 1: Find trainer and specific Pokémon
+    const trainer = await Record.findOne({ name: name.toLowerCase() });
+    if (!trainer) {
+      return res.status(404).json({ error: `Trainer '${name}' not found` });
+    }
+
+    const pokemonIndex = trainer.pokemon.findIndex(
+      (p) => p.name.toLowerCase() === pokemonName.toLowerCase()
     );
+    if (pokemonIndex === -1) {
+      return res
+        .status(404)
+        .json({ error: `Pokémon '${pokemonName}' not found in trainer team` });
+    }
 
-    if (!updatedTrainer)
-      return res.status(404).json({
-        error: `Trainer '${name}' or Pokémon '${pokemonName}' not found`,
-      });
+    // Step 2: Level up Pokémon
+    trainer.pokemon[pokemonIndex].level += levelUpCount;
+
+    // Step 3: Check evolution eligibility
+    const currentPokemon = trainer.pokemon[pokemonIndex];
+
+    const data = loadEvolutionboard();
+    const evolutionEntry = data[currentPokemon];
+
+    if (evolutionEntry) {
+      const currentStage = evolutionEntry.find(
+        (stage) => stage.name === currentPokemon.name.toLowerCase()
+      );
+
+      if (
+        currentStage &&
+        currentStage.evolvesTo.length > 0 &&
+        currentStage.level &&
+        currentPokemon.level >= currentStage.level
+      ) {
+        // Step 4: Evolve Pokémon
+        const evolvedName = currentStage.evolvesTo[0]; // first evolution target
+        currentPokemon.name = evolvedName;
+        currentPokemon.level = currentStage.level; // optional reset
+        // optionally update ID if your pokemon.json or DB has it
+        const evolvedData = await Pokemon.findOne({
+          name: evolvedName.toLowerCase(),
+        });
+        if (evolvedData) {
+          currentPokemon.id = evolvedData.id;
+        }
+      }
+    }
+
+    await trainer.save();
 
     res.json({
-      message: `${pokemonName} leveled up successfully!`,
-      trainer: updatedTrainer,
+      message: `${pokemonName} leveled up by ${levelUpCount}${
+        currentPokemon.name !== pokemonName
+          ? ` and evolved into ${currentPokemon.name}! 🎉`
+          : "!"
+      }`,
+      trainer,
     });
   } catch (err) {
     console.error("Error leveling up pokemon:", err);
     res.status(500).json({ error: "Failed to level up pokemon" });
   }
 };
-
