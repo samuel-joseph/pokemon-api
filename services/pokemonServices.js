@@ -193,6 +193,7 @@ export async function fetchNextBatch() {
           canMega: canMega(d.name),
           status: null,
           statusCounter: 0,
+          cries: d.cries
         };
       })
     );
