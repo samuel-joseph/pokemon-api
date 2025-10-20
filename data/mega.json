@@ -2365,5 +2365,59 @@
         "stage": 0
       }
     ]
+  },
+  {
+    "name": "garchomp-mega",
+    "mega_name": "Mega Garchomp",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10058.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10058.gif",
+    "maxHP": 262,
+    "currentHP": 262,
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 108,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 170,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 120,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 95,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 92,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
   }
 ]

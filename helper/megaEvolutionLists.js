@@ -43,4 +43,5 @@ export const megaEvolveCapable = [
   "diancie-mega",
   "lucario-mega",
   "greninja-ash",
+  "garchomp-mega",
 ];

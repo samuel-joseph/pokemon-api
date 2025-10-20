@@ -180,7 +180,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -362,7 +362,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -570,28 +570,28 @@
             }
           },
           {
-            "id": 3,
-            "name": "venusaur",
+            "id": 59,
+            "name": "arcanine",
             "level": 75,
-            "maxHP": 205,
-            "currentHP": 205,
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/3.gif",
-            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/3.gif",
+            "maxHP": 220,
+            "currentHP": 220,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/59.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/59.gif",
             "stats": [
               {
                 "name": "hp",
-                "base": 80,
+                "base": 90,
                 "stage": 0
               },
               {
                 "name": "attack",
-                "base": 82,
+                "base": 110,
                 "stage": 0
               },
               {
                 "name": "defense",
-                "base": 83,
+                "base": 80,
                 "stage": 0
               },
               {
@@ -601,12 +601,12 @@
               },
               {
                 "name": "special-defense",
-                "base": 100,
+                "base": 80,
                 "stage": 0
               },
               {
                 "name": "speed",
-                "base": 80,
+                "base": 95,
                 "stage": 0
               },
               {
@@ -621,74 +621,23 @@
               }
             ],
             "types": [
-              "grass",
-              "poison"
+              "fire"
             ],
             "moves": [
               {
-                "id": 75,
-                "name": "razor-leaf",
-                "type": "grass",
+                "id": 53,
+                "name": "flamethrower",
+                "type": "fire",
                 "priority": 0,
-                "damage_class": "physical",
-                "power": 55,
-                "accuracy": 95,
-                "pp": 25,
-                "crit_rate": 1,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "damage",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Has an increased chance for a critical hit."
-              },
-              {
-                "id": 79,
-                "name": "sleep-powder",
-                "type": "grass",
-                "priority": 0,
-                "damage_class": "status",
-                "power": null,
-                "accuracy": 75,
-                "pp": 15,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "sleep",
-                "ailment_chance": 0,
-                "category_name": "ailment",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 4,
-                "min_hits": 0,
-                "min_turns": 2,
-                "effect_chance": 0,
-                "effect_entries": "Puts the target to sleep."
-              },
-              {
-                "id": 572,
-                "name": "petal-blizzard",
-                "type": "grass",
-                "priority": 0,
-                "damage_class": "physical",
+                "damage_class": "special",
                 "power": 90,
                 "accuracy": 100,
                 "pp": 15,
                 "crit_rate": 0,
                 "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "damage",
+                "ailment_name": "burn",
+                "ailment_chance": 10,
+                "category_name": "damage+ailment",
                 "stat_changes": [],
                 "stat_changes_chance": 0,
                 "healing": 0,
@@ -697,23 +646,23 @@
                 "max_turns": 0,
                 "min_hits": 0,
                 "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Inflicts regular damage."
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to burn the target."
               },
               {
-                "id": 263,
-                "name": "facade",
+                "id": 673,
+                "name": "laser-focus",
                 "type": "normal",
                 "priority": 0,
-                "damage_class": "physical",
-                "power": 70,
-                "accuracy": 100,
-                "pp": 20,
+                "damage_class": "status",
+                "power": null,
+                "accuracy": null,
+                "pp": 30,
                 "crit_rate": 0,
                 "flint_chance": 0,
                 "ailment_name": "none",
                 "ailment_chance": 0,
-                "category_name": "damage",
+                "category_name": "unique",
                 "stat_changes": [],
                 "stat_changes_chance": 0,
                 "healing": 0,
@@ -723,7 +672,57 @@
                 "min_hits": 0,
                 "min_turns": 0,
                 "effect_chance": 0,
-                "effect_entries": "Power doubles if user is burned, paralyzed, or poisoned."
+                "effect_entries": "Guarantees a critical hit with the user’s next move."
+              },
+              {
+                "id": 257,
+                "name": "heat-wave",
+                "type": "fire",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 95,
+                "accuracy": 90,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "burn",
+                "ailment_chance": 10,
+                "category_name": "damage+ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to burn the target."
+              },
+              {
+                "id": 241,
+                "name": "sunny-day",
+                "type": "fire",
+                "priority": 0,
+                "damage_class": "status",
+                "power": null,
+                "accuracy": null,
+                "pp": 5,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "whole-field-effect",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Changes the weather to sunny for five turns."
               }
             ],
             "ivs": {
@@ -744,12 +743,12 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
-              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/3.ogg",
-              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/3.ogg"
+              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/59.ogg",
+              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/59.ogg"
             }
           },
           {
@@ -936,235 +935,43 @@
             }
           },
           {
-            "id": 59,
-            "name": "arcanine",
+            "id": 9,
+            "name": "blastoise",
             "level": 75,
-            "maxHP": 220,
-            "currentHP": 220,
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
-            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/59.gif",
-            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/59.gif",
+            "maxHP": 203,
+            "currentHP": 203,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/9.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/9.gif",
             "stats": [
               {
                 "name": "hp",
-                "base": 90,
-                "stage": 0
-              },
-              {
-                "name": "attack",
-                "base": 110,
-                "stage": 0
-              },
-              {
-                "name": "defense",
-                "base": 80,
-                "stage": 0
-              },
-              {
-                "name": "special-attack",
-                "base": 100,
-                "stage": 0
-              },
-              {
-                "name": "special-defense",
-                "base": 80,
-                "stage": 0
-              },
-              {
-                "name": "speed",
-                "base": 95,
-                "stage": 0
-              },
-              {
-                "name": "accuracy",
-                "base": 100,
-                "stage": 0
-              },
-              {
-                "name": "evasion",
-                "base": 100,
-                "stage": 0
-              }
-            ],
-            "types": [
-              "fire"
-            ],
-            "moves": [
-              {
-                "id": 53,
-                "name": "flamethrower",
-                "type": "fire",
-                "priority": 0,
-                "damage_class": "special",
-                "power": 90,
-                "accuracy": 100,
-                "pp": 15,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "burn",
-                "ailment_chance": 10,
-                "category_name": "damage+ailment",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 10,
-                "effect_entries": "Has a 10% chance to burn the target."
-              },
-              {
-                "id": 673,
-                "name": "laser-focus",
-                "type": "normal",
-                "priority": 0,
-                "damage_class": "status",
-                "power": null,
-                "accuracy": null,
-                "pp": 30,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "unique",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Guarantees a critical hit with the user’s next move."
-              },
-              {
-                "id": 257,
-                "name": "heat-wave",
-                "type": "fire",
-                "priority": 0,
-                "damage_class": "special",
-                "power": 95,
-                "accuracy": 90,
-                "pp": 10,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "burn",
-                "ailment_chance": 10,
-                "category_name": "damage+ailment",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 10,
-                "effect_entries": "Has a 10% chance to burn the target."
-              },
-              {
-                "id": 241,
-                "name": "sunny-day",
-                "type": "fire",
-                "priority": 0,
-                "damage_class": "status",
-                "power": null,
-                "accuracy": null,
-                "pp": 5,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "whole-field-effect",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Changes the weather to sunny for five turns."
-              }
-            ],
-            "ivs": {
-              "hp": 0,
-              "attack": 0,
-              "defense": 0,
-              "spAttack": 0,
-              "spDefense": 0,
-              "speed": 0
-            },
-            "evs": {
-              "hp": 0,
-              "attack": 0,
-              "defense": 0,
-              "spAttack": 0,
-              "spDefense": 0,
-              "speed": 0
-            },
-            "charging": false,
-            "recharging": false,
-            "canMega": false,
-            "status": null,
-            "statusCounter": 0,
-            "cries": {
-              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/59.ogg",
-              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/59.ogg"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "region": "johto",
-    "gymLeaders": [
-      {
-        "name": "Lance",
-        "pokemon": [
-          {
-            "id": 130,
-            "name": "gyarados",
-            "level": 75,
-            "maxHP": 227,
-            "currentHP": 227,
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
-            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/130.gif",
-            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/130.gif",
-            "stats": [
-              {
-                "name": "hp",
-                "base": 95,
-                "stage": 0
-              },
-              {
-                "name": "attack",
-                "base": 125,
-                "stage": 0
-              },
-              {
-                "name": "defense",
                 "base": 79,
                 "stage": 0
               },
               {
-                "name": "special-attack",
-                "base": 60,
+                "name": "attack",
+                "base": 83,
                 "stage": 0
               },
               {
-                "name": "special-defense",
+                "name": "defense",
                 "base": 100,
                 "stage": 0
               },
               {
+                "name": "special-attack",
+                "base": 85,
+                "stage": 0
+              },
+              {
+                "name": "special-defense",
+                "base": 105,
+                "stage": 0
+              },
+              {
                 "name": "speed",
-                "base": 81,
+                "base": 78,
                 "stage": 0
               },
               {
@@ -1179,8 +986,7 @@
               }
             ],
             "types": [
-              "water",
-              "flying"
+              "water"
             ],
             "moves": [
               {
@@ -1209,13 +1015,38 @@
                 "effect_entries": "Inflicts regular damage with no additional effect."
               },
               {
-                "id": 401,
-                "name": "aqua-tail",
-                "type": "water",
+                "id": 92,
+                "name": "toxic",
+                "type": "poison",
                 "priority": 0,
-                "damage_class": "physical",
-                "power": 90,
+                "damage_class": "status",
+                "power": null,
                 "accuracy": 90,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "poison",
+                "ailment_chance": 0,
+                "category_name": "ailment",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 15,
+                "min_hits": 0,
+                "min_turns": 15,
+                "effect_chance": 0,
+                "effect_entries": "Badly poisons the target, inflicting more damage every turn."
+              },
+              {
+                "id": 406,
+                "name": "dragon-pulse",
+                "type": "dragon",
+                "priority": 0,
+                "damage_class": "special",
+                "power": 85,
+                "accuracy": 100,
                 "pp": 10,
                 "crit_rate": 0,
                 "flint_chance": 0,
@@ -1234,14 +1065,14 @@
                 "effect_entries": "Inflicts regular damage with no additional effect."
               },
               {
-                "id": 37,
-                "name": "thrash",
+                "id": 263,
+                "name": "facade",
                 "type": "normal",
                 "priority": 0,
                 "damage_class": "physical",
-                "power": 120,
+                "power": 70,
                 "accuracy": 100,
-                "pp": 10,
+                "pp": 20,
                 "crit_rate": 0,
                 "flint_chance": 0,
                 "ailment_name": "none",
@@ -1256,40 +1087,7 @@
                 "min_hits": 0,
                 "min_turns": 0,
                 "effect_chance": 0,
-                "effect_entries": "Hits every turn for 2-3 turns, then confuses the user."
-              },
-              {
-                "id": 104,
-                "name": "double-team",
-                "type": "normal",
-                "priority": 0,
-                "damage_class": "status",
-                "power": null,
-                "accuracy": null,
-                "pp": 15,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "net-good-stats",
-                "stat_changes": [
-                  {
-                    "change": 1,
-                    "stat": {
-                      "name": "evasion",
-                      "url": "https://pokeapi.co/api/v2/stat/8/"
-                    }
-                  }
-                ],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Raises the user’s evasion by one stage."
+                "effect_entries": "Power doubles if user is burned, paralyzed, or poisoned."
               }
             ],
             "ivs": {
@@ -1314,8 +1112,209 @@
             "status": null,
             "statusCounter": 0,
             "cries": {
-              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/130.ogg",
-              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/130.ogg"
+              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/9.ogg",
+              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/9.ogg"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "johto",
+    "gymLeaders": [
+      {
+        "name": "Lance",
+        "pokemon": [
+          {
+            "id": 6,
+            "name": "charizard",
+            "level": 75,
+            "maxHP": 202,
+            "currentHP": 202,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/6.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/6.gif",
+            "stats": [
+              {
+                "name": "hp",
+                "base": 78,
+                "stage": 0
+              },
+              {
+                "name": "attack",
+                "base": 84,
+                "stage": 0
+              },
+              {
+                "name": "defense",
+                "base": 78,
+                "stage": 0
+              },
+              {
+                "name": "special-attack",
+                "base": 109,
+                "stage": 0
+              },
+              {
+                "name": "special-defense",
+                "base": 85,
+                "stage": 0
+              },
+              {
+                "name": "speed",
+                "base": 100,
+                "stage": 0
+              },
+              {
+                "name": "accuracy",
+                "base": 100,
+                "stage": 0
+              },
+              {
+                "name": "evasion",
+                "base": 100,
+                "stage": 0
+              }
+            ],
+            "types": [
+              "fire",
+              "flying"
+            ],
+            "moves": [
+              {
+                "id": 17,
+                "name": "wing-attack",
+                "type": "flying",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 60,
+                "accuracy": 100,
+                "pp": 35,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              },
+              {
+                "id": 5,
+                "name": "mega-punch",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 80,
+                "accuracy": 85,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              },
+              {
+                "id": 14,
+                "name": "swords-dance",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "status",
+                "power": null,
+                "accuracy": null,
+                "pp": 20,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "net-good-stats",
+                "stat_changes": [
+                  {
+                    "change": 2,
+                    "stat": {
+                      "name": "attack",
+                      "url": "https://pokeapi.co/api/v2/stat/2/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Raises the user’s Attack by two stages."
+              },
+              {
+                "id": 117,
+                "name": "bide",
+                "type": "normal",
+                "priority": 1,
+                "damage_class": "physical",
+                "power": null,
+                "accuracy": null,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "User waits for two turns, then hits back for twice the damage it took."
+              }
+            ],
+            "ivs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "evs": {
+              "hp": 0,
+              "attack": 0,
+              "defense": 0,
+              "spAttack": 0,
+              "spDefense": 0,
+              "speed": 0
+            },
+            "charging": false,
+            "recharging": false,
+            "canMega": false,
+            "status": null,
+            "statusCounter": 0,
+            "cries": {
+              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/6.ogg",
+              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/6.ogg"
             }
           },
           {
@@ -2074,7 +2073,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -2083,43 +2082,43 @@
             }
           },
           {
-            "id": 6,
-            "name": "charizard",
+            "id": 130,
+            "name": "gyarados",
             "level": 75,
-            "maxHP": 202,
-            "currentHP": 202,
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/6.gif",
-            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/6.gif",
+            "maxHP": 227,
+            "currentHP": 227,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+            "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/130.gif",
+            "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/130.gif",
             "stats": [
               {
                 "name": "hp",
-                "base": 78,
+                "base": 95,
                 "stage": 0
               },
               {
                 "name": "attack",
-                "base": 84,
+                "base": 125,
                 "stage": 0
               },
               {
                 "name": "defense",
-                "base": 78,
+                "base": 79,
                 "stage": 0
               },
               {
                 "name": "special-attack",
-                "base": 109,
+                "base": 60,
                 "stage": 0
               },
               {
                 "name": "special-defense",
-                "base": 85,
+                "base": 100,
                 "stage": 0
               },
               {
                 "name": "speed",
-                "base": 100,
+                "base": 81,
                 "stage": 0
               },
               {
@@ -2134,19 +2133,19 @@
               }
             ],
             "types": [
-              "fire",
+              "water",
               "flying"
             ],
             "moves": [
               {
-                "id": 17,
-                "name": "wing-attack",
-                "type": "flying",
+                "id": 56,
+                "name": "hydro-pump",
+                "type": "water",
                 "priority": 0,
-                "damage_class": "physical",
-                "power": 60,
-                "accuracy": 100,
-                "pp": 35,
+                "damage_class": "special",
+                "power": 110,
+                "accuracy": 80,
+                "pp": 5,
                 "crit_rate": 0,
                 "flint_chance": 0,
                 "ailment_name": "none",
@@ -2164,71 +2163,13 @@
                 "effect_entries": "Inflicts regular damage with no additional effect."
               },
               {
-                "id": 5,
-                "name": "mega-punch",
-                "type": "normal",
+                "id": 401,
+                "name": "aqua-tail",
+                "type": "water",
                 "priority": 0,
                 "damage_class": "physical",
-                "power": 80,
-                "accuracy": 85,
-                "pp": 20,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "damage",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Inflicts regular damage with no additional effect."
-              },
-              {
-                "id": 14,
-                "name": "swords-dance",
-                "type": "normal",
-                "priority": 0,
-                "damage_class": "status",
-                "power": null,
-                "accuracy": null,
-                "pp": 20,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "net-good-stats",
-                "stat_changes": [
-                  {
-                    "change": 2,
-                    "stat": {
-                      "name": "attack",
-                      "url": "https://pokeapi.co/api/v2/stat/2/"
-                    }
-                  }
-                ],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Raises the user’s Attack by two stages."
-              },
-              {
-                "id": 117,
-                "name": "bide",
-                "type": "normal",
-                "priority": 1,
-                "damage_class": "physical",
-                "power": null,
-                "accuracy": null,
+                "power": 90,
+                "accuracy": 90,
                 "pp": 10,
                 "crit_rate": 0,
                 "flint_chance": 0,
@@ -2244,7 +2185,65 @@
                 "min_hits": 0,
                 "min_turns": 0,
                 "effect_chance": 0,
-                "effect_entries": "User waits for two turns, then hits back for twice the damage it took."
+                "effect_entries": "Inflicts regular damage with no additional effect."
+              },
+              {
+                "id": 37,
+                "name": "thrash",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 120,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Hits every turn for 2-3 turns, then confuses the user."
+              },
+              {
+                "id": 104,
+                "name": "double-team",
+                "type": "normal",
+                "priority": 0,
+                "damage_class": "status",
+                "power": null,
+                "accuracy": null,
+                "pp": 15,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "net-good-stats",
+                "stat_changes": [
+                  {
+                    "change": 1,
+                    "stat": {
+                      "name": "evasion",
+                      "url": "https://pokeapi.co/api/v2/stat/8/"
+                    }
+                  }
+                ],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Raises the user’s evasion by one stage."
               }
             ],
             "ivs": {
@@ -2269,8 +2268,8 @@
             "status": null,
             "statusCounter": 0,
             "cries": {
-              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/6.ogg",
-              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/6.ogg"
+              "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/130.ogg",
+              "legacy": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/130.ogg"
             }
           }
         ]
@@ -2884,7 +2883,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -4040,7 +4039,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -4596,7 +4595,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": false,
+            "canMega": true,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -5397,7 +5396,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
