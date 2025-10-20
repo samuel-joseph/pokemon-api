@@ -4,12 +4,15 @@ import express from "express";
 import { fetchNextBatch } from "./services/pokemonServices.js";
 import { fetchAllMoves } from "./script/fetchMoves.js";
 import { buildNpcData } from "./script/buildNpc.js";
+import { generateEvolutionChart } from "./script/evolutionChart.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import pokemonRoutes from "./routes/pokemonRoutes.js";
 import recordRoutes from "./routes/recordRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import megaRoutes from "./routes/megaRoutes.js";
+import buddyRoutes from "./routes/buddyRoutes.js";
+import evolutionRoutes from "./routes/evolutionRoutes.js";
 // import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
 
@@ -132,6 +135,8 @@ async function startServer() {
   app.use("/api/auth", authRoutes);
   app.use("/api/record", recordRoutes);
   app.use("/api/mega", megaRoutes);
+  app.use("/api/buddy", buddyRoutes);
+  app.use("/api/evolution", evolutionRoutes);
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
 
@@ -143,6 +148,7 @@ async function startServer() {
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();
+    await generateEvolutionChart();
   });
 }
 

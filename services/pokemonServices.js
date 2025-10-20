@@ -13,6 +13,7 @@ const MOVES_FILE = path.join(__dirname, "..", "data/moves.json");
 const NPC_FILE = path.join(__dirname, "..", "data/npc.json");
 const LEADERBOARD_FILE = path.join(__dirname, "..", "data/leaderboard.json");
 const MEGA_FILE = path.join(__dirname, "..", "data/mega.json");
+const EVOLUTION_FILE = path.join(__dirname, "..", "data/evolutionChart.json");
 
 const BATCH_SIZE = 150;
 const POKEMON_LEVEL = 75;
@@ -23,6 +24,11 @@ const POKEMON_LEVEL = 75;
 
 export const loadLeaderboard = () => {
   const data = fs.readFileSync(LEADERBOARD_FILE, "utf8");
+  return JSON.parse(data);
+};
+
+export const loadEvolutionboard = () => {
+  const data = fs.readFileSync(EVOLUTION_FILE, "utf8");
   return JSON.parse(data);
 };
 
@@ -193,7 +199,7 @@ export async function fetchNextBatch() {
           canMega: canMega(d.name),
           status: null,
           statusCounter: 0,
-          cries: d.cries
+          cries: d.cries,
         };
       })
     );
