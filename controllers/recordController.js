@@ -79,14 +79,12 @@ export const deleteRecord = async (req, res) => {
 export const incrementRegionWin = async (req, res) => {
   try {
     const { name, region } = req.params;
-    const { pokemon } = req.body;
 
     // Increment "win" and optionally replace "pokemon" for that region
     const record = await Record.findOneAndUpdate(
       { name, "record.region": region },
       {
         $inc: { "record.$.win": 1 },
-        ...(pokemon ? { "record.$.pokemon": pokemon } : {}), // optional
       },
       { new: true }
     );

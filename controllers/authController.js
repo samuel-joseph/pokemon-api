@@ -7,7 +7,7 @@ import Pokemon from "../models/pokemon.js";
 export const signup = async (req, res) => {
   // pokemonsUsed: array of pokemon objects the player defeated Kanto leader with
 
-  const { username, password, pokemon } = req.body;
+  const { username, password } = req.body;
   try {
     // Check if user exists
     const existingUser = await Trainer.findOne({ username });
@@ -31,7 +31,6 @@ export const signup = async (req, res) => {
         {
           region: "kanto",
           win: 1,
-          pokemon,
         },
       ],
     });

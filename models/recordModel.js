@@ -89,7 +89,6 @@ const recordSchema = new mongoose.Schema({
     {
       region: { type: String },
       win: { type: Number, default: 0 },
-      pokemon: { type: [pokemonModel], required: true },
     },
   ],
 });
