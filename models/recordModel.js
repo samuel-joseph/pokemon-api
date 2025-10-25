@@ -43,7 +43,18 @@ export const pokemonModel = new mongoose.Schema({
     },
   ],
   types: [String],
-  moves: [moveModel],
+  moves: {
+    type: [moveModel],
+    validate: {
+      validator: (moves) => moves.length <= 4,
+      message: "A Pokémon cannot have more than 4 moves.",
+    },
+  },
+  movesDB: {
+    type: [moveModel],
+    required: false, // 👈 explicitly mark as optional
+    default: [], // 👈 ensures it won’t throw if not provided
+  },
   ivs: {
     hp: Number,
     attack: Number,
@@ -62,6 +73,13 @@ export const pokemonModel = new mongoose.Schema({
   },
   charging: Boolean,
   recharging: Boolean,
+  canMega: Boolean,
+  status: String || null,
+  statusCounter: Number,
+  cries: {
+    latest: String || null,
+    legacy: String || null,
+  },
 });
 
 const recordSchema = new mongoose.Schema({

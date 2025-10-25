@@ -18,6 +18,16 @@ const EVOLUTION_FILE = path.join(__dirname, "..", "data/evolutionChart.json");
 const BATCH_SIZE = 150;
 const POKEMON_LEVEL = 75;
 
+const starterPokemons = [
+  "venusaur",
+  "charizard",
+  "blastoise",
+  "sceptile",
+  "blaziken",
+  "swampert",
+  "greninja",
+];
+
 // ------------------------
 // Helpers
 // ------------------------
@@ -166,6 +176,8 @@ export async function fetchNextBatch() {
           { name: "evasion", base: 100, stage: 0 }
         );
 
+        const isStarter = starterPokemons.includes(d.name.toLowerCase());
+
         return {
           id: startIndex + index + 1,
           name: d.name,
@@ -178,6 +190,7 @@ export async function fetchNextBatch() {
           stats,
           types: pokemonTypes,
           moves: chosenMoves,
+          ...(isStarter && { movesDB: validMoves }),
           ivs: {
             hp: 0,
             attack: 0,
