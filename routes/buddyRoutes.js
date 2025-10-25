@@ -11,6 +11,10 @@ router.put(
   authenticate,
   buddyController.levelUpTrainerPokemon
 );
-
+router.put(
+  "/:name/pokemon/:pokemonName/experience",
+  authenticate,
+  buddyController.addExperienceToPokemon
+);
 
 export default router;

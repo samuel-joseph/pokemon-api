@@ -114,3 +114,33 @@ export const levelUpTrainerPokemon = async (req, res) => {
     res.status(500).json({ error: "Failed to level up pokemon" });
   }
 };
+
+export const addExperienceToPokemon = async (req, res) => {
+  try {
+    const { name, pokemonName } = req.params;
+    const { expGain } = req.body; // frontend sends how much EXP to add
+
+    const trainer = await Pokemon.findOne({ name: name.toLowerCase() });
+    if (!trainer)
+      return res.status(404).json({ error: `Trainer '${name}' not found` });
+
+    const pokemon = trainer.pokemon.find((p) => p.name === pokemonName);
+    if (!pokemon)
+      return res
+        .status(404)
+        .json({ error: `Pokémon '${pokemonName}' not found` });
+
+    // Level up logic
+    const updatedPokemon = gainExperience(pokemon, expGain);
+
+    await trainer.save();
+
+    res.json({
+      message: `${pokemonName} gained ${expGain} EXP!`,
+      pokemon: updatedPokemon,
+    });
+  } catch (err) {
+    console.error("Error leveling up pokemon:", err);
+    res.status(500).json({ error: "Failed to add experience" });
+  }
+};

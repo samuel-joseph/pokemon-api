@@ -13,6 +13,7 @@ import authRoutes from "./routes/authRoutes.js";
 import megaRoutes from "./routes/megaRoutes.js";
 import buddyRoutes from "./routes/buddyRoutes.js";
 import evolutionRoutes from "./routes/evolutionRoutes.js";
+import narrateRoutes from "./routes/narrateRoutes.js";
 // import { MongoClient, ServerApiVersion } from "mongodb";
 import mongoose from "mongoose";
 
@@ -137,6 +138,7 @@ async function startServer() {
   app.use("/api/mega", megaRoutes);
   app.use("/api/buddy", buddyRoutes);
   app.use("/api/evolution", evolutionRoutes);
+  app.use("/api/ai", narrateRoutes);
 
   app.get("/healthz", (req, res) => res.status(200).send("ok"));
 

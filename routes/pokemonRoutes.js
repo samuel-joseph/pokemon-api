@@ -24,9 +24,4 @@ router.get("/npc", pokemonController.getNpc);
 // Get single NPC by ID
 router.get("/npc/:id", pokemonController.getNpc);
 
-// Pokémon battle narration
-router.post("/ai/comentate", pokemonController.narrateBattle);
-
-
-
 export default router; // ✅ ESM export
