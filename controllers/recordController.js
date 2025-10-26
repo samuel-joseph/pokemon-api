@@ -27,18 +27,27 @@ export const getRecord = async (req, res) => {
 export const addRecordItem = async (req, res) => {
   try {
     const { name } = req.params;
-    const newRecord = req.body; // e.g. { pokemon: "Bulbasaur", win: 0, loss: 0 }
+    const { region, win = 0 } = req.body;
+
+    // Validate required fields
+    if (!region) {
+      return res.status(400).json({ error: "Region is required." });
+    }
+
+    // Create the new record object
+    const newRecord = { region: region.toLowerCase(), win };
 
     const updatedRecord = await Record.findOneAndUpdate(
       { name: name.toLowerCase() },
-      { $push: { record: newRecord } }, // push new object into array
+      { $push: { record: newRecord } },
       { new: true }
     );
 
-    if (!updatedRecord)
+    if (!updatedRecord) {
       return res
         .status(404)
         .json({ error: `Record with name '${name}' not found` });
+    }
 
     res.json({
       message: "New record added successfully!",
@@ -79,19 +88,28 @@ export const deleteRecord = async (req, res) => {
 export const incrementRegionWin = async (req, res) => {
   try {
     const { name, region } = req.params;
+    const normalizedName = name.toLowerCase();
+    const normalizedRegion = region.toLowerCase();
 
-    // Increment "win" and optionally replace "pokemon" for that region
-    const record = await Record.findOneAndUpdate(
-      { name, "record.region": region },
-      {
-        $inc: { "record.$.win": 1 },
-      },
+    // Try increment first
+    let record = await Record.findOneAndUpdate(
+      { name: normalizedName, "record.region": normalizedRegion },
+      { $inc: { "record.$.win": 1 } },
       { new: true }
     );
 
+    // If region not found, add it with win: 1
+    if (!record) {
+      record = await Record.findOneAndUpdate(
+        { name: normalizedName },
+        { $push: { record: { region: normalizedRegion, win: 1 } } },
+        { new: true }
+      );
+    }
+
     if (!record) {
       return res.status(404).json({
-        error: `Record for '${name}' with region '${region}' not found.`,
+        error: `Record for '${name}' not found.`,
       });
     }
 

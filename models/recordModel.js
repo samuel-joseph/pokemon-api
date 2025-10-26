@@ -83,15 +83,18 @@ export const pokemonModel = new mongoose.Schema({
   },
 });
 
-const recordSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.ObjectId, ref: "Trainer", required: true },
-  name: { type: String, required: true },
-  record: [
-    {
-      region: { type: String },
-      win: { type: Number, default: 0 },
-    },
-  ],
+const recordItemSchema = new mongoose.Schema({
+  region: { type: String, required: true, lowercase: true },
+  win: { type: Number, default: 0 },
 });
+
+const recordSchema = new mongoose.Schema(
+  {
+    user: { type: mongoose.Schema.ObjectId, ref: "Trainer", required: true },
+    name: { type: String, required: true, lowercase: true },
+    record: [recordItemSchema],
+  },
+  { timestamps: true } // adds createdAt and updatedAt
+);
 
 export default mongoose.model("Record", recordSchema);
