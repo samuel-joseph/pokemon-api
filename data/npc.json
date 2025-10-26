@@ -181,7 +181,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -364,7 +364,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -6762,7 +6762,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -7522,7 +7522,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -8292,7 +8292,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -9470,7 +9470,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
@@ -10821,7 +10821,7 @@
             },
             "charging": false,
             "recharging": false,
-            "canMega": true,
+            "canMega": false,
             "status": null,
             "statusCounter": 0,
             "cries": {
