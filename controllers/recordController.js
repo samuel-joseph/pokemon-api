@@ -91,31 +91,35 @@ export const incrementRegionWin = async (req, res) => {
     const normalizedName = name.toLowerCase();
     const normalizedRegion = region.toLowerCase();
 
-    // Try increment first
-    let record = await Record.findOneAndUpdate(
+    // Try to increment existing region
+    const record = await Record.findOneAndUpdate(
       { name: normalizedName, "record.region": normalizedRegion },
       { $inc: { "record.$.win": 1 } },
       { new: true }
     );
 
-    // If region not found, add it with win: 1
-    if (!record) {
-      record = await Record.findOneAndUpdate(
-        { name: normalizedName },
-        { $push: { record: { region: normalizedRegion, win: 1 } } },
-        { new: true }
-      );
-    }
-
-    if (!record) {
-      return res.status(404).json({
-        error: `Record for '${name}' not found.`,
+    if (record) {
+      // Successfully incremented existing region
+      return res.json({
+        message: `Win count for ${region} incremented successfully!`,
+        data: record,
       });
     }
 
+    // If region not found, push a new region entry
+    const updatedRecord = await Record.findOneAndUpdate(
+      { name: normalizedName, "record.region": { $ne: normalizedRegion } },
+      { $push: { record: { region: normalizedRegion, win: 1 } } },
+      { new: true }
+    );
+
+    if (!updatedRecord) {
+      return res.status(404).json({ error: `Record for '${name}' not found.` });
+    }
+
     res.json({
-      message: `Win count for ${region} incremented successfully!`,
-      data: record,
+      message: `Win count for ${region} created successfully!`,
+      data: updatedRecord,
     });
   } catch (err) {
     console.error("Error incrementing win count:", err);
