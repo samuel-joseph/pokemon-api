@@ -29,6 +29,7 @@ export const moveModel = new mongoose.Schema({
 export const pokemonModel = new mongoose.Schema({
   id: Number,
   name: String,
+  base_experience: Number,
   level: Number,
   maxHP: Number,
   currentHP: Number,

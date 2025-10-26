@@ -17,4 +17,7 @@ router.put(
   buddyController.addExperienceToPokemon
 );
 
+// routes/buddyRoutes.js
+router.put("/:name/pokemon", authenticate, buddyController.editTrainerPokemon);
+
 export default router;

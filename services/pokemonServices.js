@@ -181,6 +181,7 @@ export async function fetchNextBatch() {
         return {
           id: startIndex + index + 1,
           name: d.name,
+          base_experience: d.base_experience,
           level: POKEMON_LEVEL,
           maxHP,
           currentHP: maxHP,

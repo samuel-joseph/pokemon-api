@@ -144,3 +144,35 @@ export const addExperienceToPokemon = async (req, res) => {
     res.status(500).json({ error: "Failed to add experience" });
   }
 };
+
+// controllers/buddyController.js
+export const editTrainerPokemon = async (req, res) => {
+  try {
+    const { name } = req.params;
+    const updatedPokemonList = req.body; // expect array of Pokémon objects
+
+    if (!Array.isArray(updatedPokemonList)) {
+      return res
+        .status(400)
+        .json({ error: "Request body must be an array of Pokémon" });
+    }
+
+    // Find trainer record
+    const trainer = await Pokemon.findOne({ name: name.toLowerCase() });
+    if (!trainer)
+      return res.status(404).json({ error: `Trainer '${name}' not found` });
+
+    // Replace the trainer's Pokémon list with the new one
+    trainer.pokemon = updatedPokemonList;
+
+    await trainer.save();
+
+    res.json({
+      message: `Trainer ${name}'s Pokémon updated successfully!`,
+      pokemon: trainer.pokemon,
+    });
+  } catch (err) {
+    console.error("Error updating trainer Pokémon:", err);
+    res.status(500).json({ error: "Failed to update Pokémon" });
+  }
+};
