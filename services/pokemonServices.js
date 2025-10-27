@@ -126,29 +126,38 @@ export async function fetchNextBatch() {
           })
           .filter(Boolean);
 
-        const stabMoves = pokemonTypes
-          .map((type) =>
-            validMoves.find(
+        const stabMoves = [];
+
+        // Collect one strong STAB move per type
+        for (const type of pokemonTypes) {
+          const stabMove = pickRandom(
+            validMoves.filter(
               (mv) =>
                 mv.power &&
                 mv.power > 50 &&
                 mv.type.toLowerCase() === type.toLowerCase()
-            )
-          )
-          .filter(Boolean);
-
-        let chosenMoves = [];
-        if (stabMoves.length > 0) {
-          const stabMove = pickRandom(stabMoves, 1);
-          chosenMoves.push(...stabMove);
-
-          const remaining = pickRandom(
-            validMoves.filter((mv) => mv !== stabMove[0]),
-            Math.min(3, validMoves.length - 1)
+            ),
+            1
           );
-          chosenMoves.push(...remaining);
-        } else {
-          chosenMoves = pickRandom(validMoves, Math.min(4, validMoves.length));
+          if (stabMove.length > 0) {
+            stabMoves.push(stabMove[0]);
+          }
+        }
+
+        let chosenMoves = [...stabMoves];
+
+        // Fill remaining slots up to 4 total with non-duplicate, random moves
+        if (chosenMoves.length < 4) {
+          const remainingMoves = validMoves.filter(
+            (mv) => !chosenMoves.includes(mv)
+          );
+
+          const randomFill = pickRandom(
+            remainingMoves,
+            Math.min(4 - chosenMoves.length, remainingMoves.length)
+          );
+
+          chosenMoves.push(...randomFill);
         }
 
         const hpStat =
