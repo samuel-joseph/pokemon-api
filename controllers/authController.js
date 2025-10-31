@@ -74,5 +74,9 @@ export const loginUser = async (req, res) => {
     { expiresIn: "7d" }
   );
 
-  res.json({ token, message: "Login successful" });
+  res.json({
+    token,
+    username: trainer.username, // ✅ Add username here
+    message: "Login successful",
+  });
 };
