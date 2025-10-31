@@ -16,7 +16,7 @@ const MEGA_FILE = path.join(__dirname, "..", "data/mega.json");
 const EVOLUTION_FILE = path.join(__dirname, "..", "data/evolutionChart.json");
 
 const BATCH_SIZE = 150;
-const POKEMON_LEVEL = 75;
+const POKEMON_LEVEL = 65;
 
 const starterPokemons = [
   "venusaur",
