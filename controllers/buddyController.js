@@ -1,5 +1,6 @@
 import Pokemon from "../models/pokemon.js";
 import { loadEvolutionboard } from "../services/pokemonServices.js";
+import { updateLevel, gainExperience } from "../services/pokemonServices.js";
 
 export const getTrainerPokemon = async (req, res) => {
   try {
