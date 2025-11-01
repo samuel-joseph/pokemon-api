@@ -10,7 +10,7 @@ export const getTrainerPokemon = async (req, res) => {
       let pokemon = await Pokemon.findOne({ name: name.toLowerCase() });
       if (!pokemon) return res.status(404).json({ error: "Pokemon not found" });
       const prevLevel = pokemon.level;
-      pokemon = updateLevel(pokemon);
+      if (prevLevel < 100) pokemon = updateLevel(pokemon);
       if (pokemon.level !== prevLevel) await pokemon.save();
       return res.json(pokemon);
     }
