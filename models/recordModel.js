@@ -81,6 +81,10 @@ export const pokemonModel = new mongoose.Schema({
     latest: String || null,
     legacy: String || null,
   },
+  lastLeveledAt: {
+    type: Date,
+    default: Date.now, // sets current time when Pokémon is created
+  },
 });
 
 const recordItemSchema = new mongoose.Schema({

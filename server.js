@@ -18,7 +18,7 @@ import narrateRoutes from "./routes/narrateRoutes.js";
 import mongoose from "mongoose";
 
 import { fileURLToPath } from "url";
-import { generateMegaData } from "./script/generateMegaData.js";
+// import { generateMegaData } from "./script/generateMegaData.js";
 
 // Compute __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -146,7 +146,6 @@ async function startServer() {
     console.log(`✅ Server running at http://localhost:${PORT}`);
 
     // Background tasks
-    await generateMegaData();
     await ensureMoves(); // <-- ensure npc.json exists before using it
     startIncrementalPokemon();
     await ensureNpc();

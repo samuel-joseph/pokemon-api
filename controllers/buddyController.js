@@ -6,13 +6,25 @@ export const getTrainerPokemon = async (req, res) => {
     const { name } = req.params;
 
     if (name) {
-      const pokemon = await Pokemon.findOne({ name: name.toLowerCase() });
+      let pokemon = await Pokemon.findOne({ name: name.toLowerCase() });
       if (!pokemon) return res.status(404).json({ error: "Pokemon not found" });
+      const prevLevel = pokemon.level;
+      pokemon = updateLevel(pokemon);
+      if (pokemon.level !== prevLevel) await pokemon.save();
       return res.json(pokemon);
     }
 
     const allPokemon = await Pokemon.find();
-    res.json(allPokemon);
+
+    const updatedPokemonPromises = allPokemon.map(async (p) => {
+      const prevLevel = p.level;
+      const updatedP = updateLevel(p);
+      if (updatedP.level !== prevLevel) await updatedP.save();
+      return updatedP;
+    });
+
+    const allUpdatedPokemon = await Promise.all(updatedPokemonPromises);
+    res.json(allUpdatedPokemon);
   } catch (err) {
     console.error("Error fetching pokemon:", err);
     res.status(500).json({ error: "Failed to fetch pokemon" });

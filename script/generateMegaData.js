@@ -15,7 +15,7 @@ async function getPokemonData(name) {
   const data = await res.json();
 
   const hpStat = data.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
-  const maxHP = calculateHP(hpStat, 80);
+  const maxHP = calculateHP(hpStat, data.level);
 
   let stats = data.stats.map((s) => ({
     name: s.stat.name,
@@ -32,8 +32,6 @@ async function getPokemonData(name) {
     mega_name: formatPokemonName(data.name),
     sprite_front: data.sprites.other.showdown.front_default,
     sprite_back: data.sprites.other.showdown.back_default,
-    maxHP,
-    currentHP: maxHP,
     types: data.types.map((t) => t.type.name),
     stats,
   };

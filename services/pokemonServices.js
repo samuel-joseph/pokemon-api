@@ -16,7 +16,10 @@ const MEGA_FILE = path.join(__dirname, "..", "data/mega.json");
 const EVOLUTION_FILE = path.join(__dirname, "..", "data/evolutionChart.json");
 
 const BATCH_SIZE = 150;
-const POKEMON_LEVEL = 65;
+const POKEMON_LEVEL = 60;
+
+const HOURS_TO_LEVEL = 8;
+const MS_PER_HOUR = 60 * 60 * 1000;
 
 const starterPokemons = [
   "venusaur",
@@ -31,6 +34,20 @@ const starterPokemons = [
 // ------------------------
 // Helpers
 // ------------------------
+
+export const updateLevel = (pokemon) => {
+  const now = Date.now();
+  const lastLeveled = new Date(pokemon.lastLeveledAt).getTime();
+  const hoursPassed = (now - lastLeveled) / MS_PER_HOUR;
+
+  if (hoursPassed >= HOURS_TO_LEVEL) {
+    const levelsToAdd = Math.floor(hoursPassed / HOURS_TO_LEVEL);
+    pokemon.level += levelsToAdd;
+    pokemon.lastLeveledAt = now; // reset timestamp
+  }
+
+  return pokemon;
+};
 
 export const loadLeaderboard = () => {
   const data = fs.readFileSync(LEADERBOARD_FILE, "utf8");
@@ -129,16 +146,22 @@ export async function fetchNextBatch() {
         const stabMoves = [];
 
         // Collect one strong STAB move per type
+
         for (const type of pokemonTypes) {
+          // Determine if we prioritize physical or special
+          const preferredClass = d.attack > d.spAttack ? "physical" : "special";
+
           const stabMove = pickRandom(
             validMoves.filter(
               (mv) =>
                 mv.power &&
                 mv.power > 50 &&
-                mv.type.toLowerCase() === type.toLowerCase()
+                mv.type.toLowerCase() === type.toLowerCase() &&
+                mv.damage_class.toLowerCase() === preferredClass
             ),
             1
           );
+
           if (stabMove.length > 0) {
             stabMoves.push(stabMove[0]);
           }

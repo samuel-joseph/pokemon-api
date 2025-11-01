@@ -4,7 +4,7 @@ import { authenticate } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.get("/:name", buddyController.getTrainerPokemon);
+router.get("/:name", authenticate, buddyController.getTrainerPokemon);
 router.put("/:name", authenticate, buddyController.addTrainerPokemon);
 router.put(
   "/:name/pokemon/:pokemonName/levelup",

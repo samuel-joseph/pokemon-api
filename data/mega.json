@@ -4,8 +4,6 @@
     "mega_name": "Mega Venusaur",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10033.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10033.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "grass",
       "poison"
@@ -58,8 +56,6 @@
     "mega_name": "Mega Charizard X",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10034.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10034.gif",
-    "maxHP": 214,
-    "currentHP": 214,
     "types": [
       "fire",
       "dragon"
@@ -112,8 +108,58 @@
     "mega_name": "Mega Charizard Y",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10035.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10035.gif",
-    "maxHP": 214,
-    "currentHP": 214,
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "stats": [
+      {
+        "name": "hp",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "attack",
+        "base": 104,
+        "stage": 0
+      },
+      {
+        "name": "defense",
+        "base": 78,
+        "stage": 0
+      },
+      {
+        "name": "special-attack",
+        "base": 159,
+        "stage": 0
+      },
+      {
+        "name": "special-defense",
+        "base": 115,
+        "stage": 0
+      },
+      {
+        "name": "speed",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "accuracy",
+        "base": 100,
+        "stage": 0
+      },
+      {
+        "name": "evasion",
+        "base": 100,
+        "stage": 0
+      }
+    ]
+  },
+   {
+    "name": "leon-charizard",
+    "mega_name": "Gigantmax Charizard",
+    "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10196.gif",
+    "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10196.gif",
     "types": [
       "fire",
       "flying"
@@ -166,8 +212,6 @@
     "mega_name": "Mega Blastoise",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10036.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10036.gif",
-    "maxHP": 216,
-    "currentHP": 216,
     "types": [
       "water"
     ],
@@ -219,8 +263,6 @@
     "mega_name": "Mega Beedrill",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10090.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10090.gif",
-    "maxHP": 194,
-    "currentHP": 194,
     "types": [
       "bug",
       "poison"
@@ -273,8 +315,6 @@
     "mega_name": "Mega Pidgeot",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10073.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10073.gif",
-    "maxHP": 222,
-    "currentHP": 222,
     "types": [
       "normal",
       "flying"
@@ -327,8 +367,6 @@
     "mega_name": "Mega Alakazam",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10037.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10037.gif",
-    "maxHP": 178,
-    "currentHP": 178,
     "types": [
       "psychic"
     ],
@@ -380,8 +418,6 @@
     "mega_name": "Mega Slowbro",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10071.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10071.gif",
-    "maxHP": 242,
-    "currentHP": 242,
     "types": [
       "water",
       "psychic"
@@ -434,8 +470,6 @@
     "mega_name": "Mega Gengar",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10038.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10038.gif",
-    "maxHP": 186,
-    "currentHP": 186,
     "types": [
       "ghost",
       "poison"
@@ -488,8 +522,6 @@
     "mega_name": "Mega Kangaskhan",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10039.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10039.gif",
-    "maxHP": 258,
-    "currentHP": 258,
     "types": [
       "normal"
     ],
@@ -541,8 +573,6 @@
     "mega_name": "Mega Pinsir",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10040.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10040.gif",
-    "maxHP": 194,
-    "currentHP": 194,
     "types": [
       "bug",
       "flying"
@@ -595,8 +625,6 @@
     "mega_name": "Mega Gyarados",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10041.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10041.gif",
-    "maxHP": 242,
-    "currentHP": 242,
     "types": [
       "water",
       "dark"
@@ -649,8 +677,6 @@
     "mega_name": "Mega Aerodactyl",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10042.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10042.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "rock",
       "flying"
@@ -703,8 +729,6 @@
     "mega_name": "Mega Mewtwo X",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10043.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10043.gif",
-    "maxHP": 259,
-    "currentHP": 259,
     "types": [
       "psychic",
       "fighting"
@@ -757,8 +781,6 @@
     "mega_name": "Mega Mewtwo Y",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10044.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10044.gif",
-    "maxHP": 259,
-    "currentHP": 259,
     "types": [
       "psychic"
     ],
@@ -810,8 +832,6 @@
     "mega_name": "Mega Ampharos",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10045.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10045.gif",
-    "maxHP": 234,
-    "currentHP": 234,
     "types": [
       "electric",
       "dragon"
@@ -864,8 +884,6 @@
     "mega_name": "Mega Steelix",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10072.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10072.gif",
-    "maxHP": 210,
-    "currentHP": 210,
     "types": [
       "steel",
       "ground"
@@ -918,8 +936,6 @@
     "mega_name": "Mega Scizor",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10046.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10046.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "bug",
       "steel"
@@ -972,8 +988,6 @@
     "mega_name": "Mega Heracross",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10047.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10047.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "bug",
       "fighting"
@@ -1026,8 +1040,6 @@
     "mega_name": "Mega Houndoom",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10048.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10048.gif",
-    "maxHP": 210,
-    "currentHP": 210,
     "types": [
       "dark",
       "fire"
@@ -1080,8 +1092,6 @@
     "mega_name": "Mega Tyranitar",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10049.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10049.gif",
-    "maxHP": 250,
-    "currentHP": 250,
     "types": [
       "rock",
       "dark"
@@ -1134,8 +1144,6 @@
     "mega_name": "Mega Sceptile",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10065.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10065.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "grass",
       "dragon"
@@ -1188,8 +1196,6 @@
     "mega_name": "Mega Blaziken",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10050.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10050.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "fire",
       "fighting"
@@ -1242,8 +1248,6 @@
     "mega_name": "Mega Swampert",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10064.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10064.gif",
-    "maxHP": 250,
-    "currentHP": 250,
     "types": [
       "water",
       "ground"
@@ -1296,8 +1300,6 @@
     "mega_name": "Mega Gardevoir",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10051.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10051.gif",
-    "maxHP": 198,
-    "currentHP": 198,
     "types": [
       "psychic",
       "fairy"
@@ -1350,8 +1352,6 @@
     "mega_name": "Mega Sableye",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10066.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10066.gif",
-    "maxHP": 170,
-    "currentHP": 170,
     "types": [
       "dark",
       "ghost"
@@ -1404,8 +1404,6 @@
     "mega_name": "Mega Mawile",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10052.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10052.gif",
-    "maxHP": 170,
-    "currentHP": 170,
     "types": [
       "steel",
       "fairy"
@@ -1458,8 +1456,6 @@
     "mega_name": "Mega Aggron",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10053.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10053.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "steel"
     ],
@@ -1511,8 +1507,6 @@
     "mega_name": "Mega Medicham",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10054.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10054.gif",
-    "maxHP": 186,
-    "currentHP": 186,
     "types": [
       "fighting",
       "psychic"
@@ -1565,8 +1559,6 @@
     "mega_name": "Mega Manectric",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10055.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10055.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "electric"
     ],
@@ -1618,8 +1610,6 @@
     "mega_name": "Mega Sharpedo",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10070.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10070.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "water",
       "dark"
@@ -1672,8 +1662,6 @@
     "mega_name": "Mega Camerupt",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10087.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10087.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "fire",
       "ground"
@@ -1726,8 +1714,6 @@
     "mega_name": "Mega Altaria",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10067.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10067.gif",
-    "maxHP": 210,
-    "currentHP": 210,
     "types": [
       "dragon",
       "fairy"
@@ -1780,8 +1766,6 @@
     "mega_name": "Mega Banette",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10056.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10056.gif",
-    "maxHP": 192,
-    "currentHP": 192,
     "types": [
       "ghost"
     ],
@@ -1833,8 +1817,6 @@
     "mega_name": "Mega Absol",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10057.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10057.gif",
-    "maxHP": 194,
-    "currentHP": 194,
     "types": [
       "dark"
     ],
@@ -1886,8 +1868,6 @@
     "mega_name": "Mega Glalie",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10074.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10074.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "ice"
     ],
@@ -1939,8 +1919,6 @@
     "mega_name": "Mega Salamence",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10089.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10089.gif",
-    "maxHP": 242,
-    "currentHP": 242,
     "types": [
       "dragon",
       "flying"
@@ -1993,8 +1971,6 @@
     "mega_name": "Mega Metagross",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10076.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10076.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "steel",
       "psychic"
@@ -2047,8 +2023,6 @@
     "mega_name": "Mega Latias",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10062.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10062.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "dragon",
       "psychic"
@@ -2101,8 +2075,6 @@
     "mega_name": "Mega Latios",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10063.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10063.gif",
-    "maxHP": 218,
-    "currentHP": 218,
     "types": [
       "dragon",
       "psychic"
@@ -2155,8 +2127,6 @@
     "mega_name": "Mega Audino",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10069.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10069.gif",
-    "maxHP": 254,
-    "currentHP": 254,
     "types": [
       "normal",
       "fairy"
@@ -2209,8 +2179,6 @@
     "mega_name": "Mega Diancie",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10075.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10075.gif",
-    "maxHP": 170,
-    "currentHP": 170,
     "types": [
       "rock",
       "fairy"
@@ -2263,8 +2231,6 @@
     "mega_name": "Mega Lucario",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10059.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10059.gif",
-    "maxHP": 202,
-    "currentHP": 202,
     "types": [
       "fighting",
       "steel"
@@ -2317,8 +2283,6 @@
     "mega_name": "Greninja Ash",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10117.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10117.gif",
-    "maxHP": 205,
-    "currentHP": 205,
     "types": [
       "water",
       "dark"
@@ -2371,8 +2335,6 @@
     "mega_name": "Mega Garchomp",
     "sprite_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10058.gif",
     "sprite_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/10058.gif",
-    "maxHP": 262,
-    "currentHP": 262,
     "types": [
       "dragon",
       "ground"
