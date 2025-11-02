@@ -8905,21 +8905,29 @@
               "psychic"
             ],
             "moves": [
-              {
-                "id": 796,
-                "name": "steel-beam",
+               {
+                "id": 232,
+                "name": "metal-claw",
                 "type": "steel",
                 "priority": 0,
-                "damage_class": "special",
-                "power": 140,
+                "damage_class": "physical",
+                "power": 50,
                 "accuracy": 95,
-                "pp": 5,
+                "pp": 35,
                 "crit_rate": 0,
                 "flint_chance": 0,
                 "ailment_name": "none",
                 "ailment_chance": 0,
-                "category_name": "damage",
-                "stat_changes": [],
+                "category_name": "damage+raise",
+                "stat_changes": [
+                  {
+                    "change": 1,
+                    "stat": {
+                      "name": "attack",
+                      "url": "https://pokeapi.co/api/v2/stat/2/"
+                    }
+                  }
+                ],
                 "stat_changes_chance": 0,
                 "healing": 0,
                 "drain": 0,
@@ -8927,8 +8935,8 @@
                 "max_turns": 0,
                 "min_hits": 0,
                 "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "Inflicts damage, and the user takes damage equal to half of its max HP, rounded up."
+                "effect_chance": 10,
+                "effect_entries": "Has a 10% chance to raise the user’s Attack by one stage."
               },
               {
                 "id": 473,
@@ -8954,6 +8962,31 @@
                 "min_turns": 0,
                 "effect_chance": 0,
                 "effect_entries": "Inflicts damage based on the target’s Defense, not Special Defense."
+              },
+              {
+                "id": 706,
+                "name": "psychic-fangs",
+                "type": "psychic",
+                "priority": 0,
+                "damage_class": "physical",
+                "power": 85,
+                "accuracy": 100,
+                "pp": 10,
+                "crit_rate": 0,
+                "flint_chance": 0,
+                "ailment_name": "none",
+                "ailment_chance": 0,
+                "category_name": "damage",
+                "stat_changes": [],
+                "stat_changes_chance": 0,
+                "healing": 0,
+                "drain": 0,
+                "max_hits": 0,
+                "max_turns": 0,
+                "min_hits": 0,
+                "min_turns": 0,
+                "effect_chance": 0,
+                "effect_entries": "Destroys Reflect and Light Screen."
               },
               {
                 "id": 612,
@@ -8987,31 +9020,6 @@
                 "min_turns": 0,
                 "effect_chance": 100,
                 "effect_entries": "Raises the user’s Attack by one stage after inflicting damage."
-              },
-              {
-                "id": 153,
-                "name": "explosion",
-                "type": "normal",
-                "priority": 0,
-                "damage_class": "physical",
-                "power": 250,
-                "accuracy": 100,
-                "pp": 5,
-                "crit_rate": 0,
-                "flint_chance": 0,
-                "ailment_name": "none",
-                "ailment_chance": 0,
-                "category_name": "damage",
-                "stat_changes": [],
-                "stat_changes_chance": 0,
-                "healing": 0,
-                "drain": 0,
-                "max_hits": 0,
-                "max_turns": 0,
-                "min_hits": 0,
-                "min_turns": 0,
-                "effect_chance": 0,
-                "effect_entries": "User faints."
               }
             ],
             "ivs": {
